@@ -1,0 +1,128 @@
+:root{
+  /* --main-color : #202f5b; */
+  --main-color: #ab833b;
+  --main-color-shade: #1151d3;
+  --head-font: "Montserrat", sans-serif;
+  --menu-font: "Work Sans", sans-serif;
+    --white-shade: #f3eeee;
+}
+.tags-container{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 20px;
+    font-family: var(--menu-font);
+    font-weight: 550;
+    padding: 10px var(--pad);
+    /* color: ; */
+    background-color: white;
+}
+.tag-menu{
+    color: var(--main-color-shade);
+    background-color: var(--white-shade);
+    padding: 2px 5px;
+    text-wrap: nowrap;
+    border-radius: 3px;
+}
+.tag-menu:hover{
+    color: var(--white-shade);
+    background-color: var(--main-color-shade);
+    padding: 2px 5px;
+}
+.tag-menu-container{
+    display: flex;
+    gap: 20px;
+}
+.marquee-container{
+    display: flex;
+    font-family: var(--head-font);
+    padding: 20px var(--pad);
+    justify-items: center;
+    align-items: center;
+}
+.latest-news{
+    text-wrap: nowrap;
+    background-color: var(--main-color-shade);
+    color: white;
+    padding: 10px 15px ;
+}
+.hero-section{
+    display: flex;
+    gap: 2em;
+    /* justify-content: space-between; */
+    padding: 0px var(--pad);
+}
+.carousel{
+    height: 470px;
+    /* width: 30px; */
+}
+.latest-section{
+    background-color: white;
+    padding: 15px;
+}
+.home-container{
+    padding: 25px var(--pad);
+    background-color: white;
+    font-family: var(--head-font);
+    margin-bottom: 50px;
+}
+.home-content{
+    padding: 25px var(--pad);
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 30px;
+}
+.first-side{
+    background-color: white;
+    max-width: 795px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 30px;
+    max-height: fit-content;
+}
+.first-side p{
+    color: #7a7a7a;
+}
+.first-side h4{
+    color: #7a7a7a;
+    font-weight: 600;
+}
+.second-side{
+    width: 100%;
+}
+.people-container{
+    justify-items: center;
+}
+.people-container h2{
+    color: #ab833b;
+    font-size: 30px ;
+}
+
+@media (max-width: 768px) {
+  .tag-menu-container{
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .tags-container{
+    display: block;   
+  }
+  .latest-news{
+    display: none;
+  }
+  .home-content{
+    padding: 25px var(--pad);
+    display: block;
+    /* justify-content: space-between; */
+    gap: 30px;
+  }
+  .people-icon{
+    width: 30px;
+  }
+  .people-container h2{
+    font-size: 20px;
+  }
+  .image-carousel{
+    max-height: 400px;
+  }
+}
