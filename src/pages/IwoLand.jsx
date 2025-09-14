@@ -11,7 +11,7 @@ const IwoLand = () => {
       </div>
       <div className="home-content">
           <div className='first-side'>
-                  <ImageCarousel />
+              <ImageCarousel />
               <p>Iwo is a prominent Yoruba town in Osun State, southwestern Nigeria. Rich in cultural, spiritual, and historical heritage, Iwo has long been an important center of Yoruba civilization, It is founded by Adekola Telu, the son of Luwo Gbagida, a female Ooni of Ife — one of the few female traditional rulers in Yoruba history.</p>
               <h4>Discover the Iwo People</h4>
               <p>Iwo People are predominantly Yoruba-speaking, culturally rich, religiously diverse, and proud of their deep-rooted heritage. They are widely respected for their resilience, hospitality, and contributions to religion, education, and culture in Nigeria.</p>
@@ -35,13 +35,13 @@ const IwoLand = () => {
                   </div>
               </div> */}
               <div>
-                  <h1 style={{color: "", textAlign: "center", marginTop: "35px", marginBottom: "35px"}}>The Iwo People</h1>
-                  <ImageCarousel />
+                <h1 style={{color: "", textAlign: "center", marginTop: "35px", marginBottom: "35px"}}>The Iwo People</h1>
+                <ImageCarousel />
               </div>
               
           </div>
           <div className='second-side'>
-              <SideBar />
+            <SideBar />
           </div>
       </div>
     </div>

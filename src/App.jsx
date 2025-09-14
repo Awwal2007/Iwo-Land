@@ -9,6 +9,7 @@ import IwoLand from './pages/IwoLand.jsx';
 import Blogs from './pages/Blogs.jsx';
 import SingleBlog from './components/SingleBlog.jsx';
 import Gallery from './pages/Gallery.jsx';
+import Admin from './pages/Admin.jsx';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='/iwo-land' element={<IwoLand />} />
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/gallery' element={<Gallery />} />
+        {/* <Route path='/admin' element={<Admin />} /> */}
         <Route path='/singleblog/:id' element={<SingleBlog />} />
       </Routes>
       <Footer />

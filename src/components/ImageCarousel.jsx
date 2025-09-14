@@ -17,15 +17,15 @@ const ImageCarousel = () => {
     >
       <div>
         <img src={image1} alt="Slide 1" />
-        <p className="legend">Slide One</p>
+        {/* <p className="legend">Slide One</p> */}
       </div>
       <div>
         <img src={image2} alt="Slide 2" />
-        <p className="legend">Slide Two</p>
+        {/* <p className="legend">Slide Two</p> */}
       </div>
       <div>
         <img src={image3} alt="Slide 3" />
-        <p className="legend">Slide Three</p>
+        {/* <p className="legend">Slide Three</p> */}
       </div>
     </Carousel>
   );

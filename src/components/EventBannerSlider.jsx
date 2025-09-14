@@ -1,9 +1,9 @@
-    import React from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 import './css/EventBannerSlider.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import image from '../assets/IMG-20250722-WA0089.jpg'
+// import image from '../assets/IMG-20250722-WA0089.jpg'
 import sliderData from './news';
 // const sliderData = [
 //   {
