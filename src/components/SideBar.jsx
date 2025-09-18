@@ -7,7 +7,7 @@ import Button from '@mui/joy/Button';
 
 import { SlCalender } from "react-icons/sl";
 import CategorySidebar from './CategoryContent';
-import TwitterWidget from './TwitterWidget';
+import FacebookWidget from './FacebookWidget';
 import useMediaQuery from './MediaQuery';
 
 const SideBar = () => {
@@ -88,8 +88,8 @@ const SideBar = () => {
             <CategorySidebar />
         </div>
         <div>
-            <TwitterWidget />
-            {/* <TwitterWidget /> */}
+            <FacebookWidget />
+            {/* <FacebookWidget /> */}
         </div>
     </div>
   )

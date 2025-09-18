@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { getEvents, createEvent, deleteEvent } from '../services/EventService';
 import './css/Admin.css';
+import { useNews } from '../hooks/useNews';
+
 
 const Admin = () => {
   const [events, setEvents] = useState([]);
   const [newEvent, setNewEvent] = useState({ title: '', date: '', description: '', image: null });
+  const {createNews, fetchNews} = useNews();
 
   useEffect(() => {
     loadEvents();
   }, []);
 
   const loadEvents = async () => {
-    const res = await getEvents();
+    const res = await fetchNews();
+    console.log(res);
+    
     setEvents(res.data);
   };
 
@@ -29,17 +33,17 @@ const Admin = () => {
     formData.append('title', newEvent.title);
     formData.append('date', newEvent.date);
     formData.append('description', newEvent.description);
-    if (newEvent.image) formData.append('image', newEvent.image);
+    if (newEvent.image) formData.append('mainImage', newEvent.image);
 
-    await createEvent(formData);
+    await createNews(formData);
     setNewEvent({ title: '', date: '', description: '', image: null });
     loadEvents();
   };
 
-  const removeEvent = async (id) => {
-    await deleteEvent(id);
-    loadEvents();
-  };
+  // const removeEvent = async (id) => {
+  //   await deleteEvent(id);
+  //   loadEvents();
+  // };
 
   return (
     <div className="admin-container">
@@ -48,7 +52,7 @@ const Admin = () => {
         <input type="text" name="title" placeholder="Title" value={newEvent.title} onChange={handleChange} />
         <input type="date" name="date" value={newEvent.date} onChange={handleChange} />
         <textarea name="description" placeholder="Description" value={newEvent.description} onChange={handleChange}></textarea>
-        <input  type="file" onChange={handleImage} />
+        <input name='mainImage' type="file" onChange={handleImage} />
         <button type="submit">Add Event</button>
       </form>
 

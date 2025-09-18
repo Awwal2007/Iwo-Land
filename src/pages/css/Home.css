@@ -125,4 +125,7 @@
   .image-carousel{
     max-height: 400px;
   }
+  .marquee{
+    max-width: 655px;
+  }
 }

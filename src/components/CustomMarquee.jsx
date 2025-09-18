@@ -11,6 +11,7 @@ function CustomMarquee() {
       pauseOnHover
       speed={80}
       gradient={false}
+      className='marquee'
     >
       {news.map((newsItem) => (
         <span key={newsItem.id} style={{ marginRight: '50px', fontWeight: '500' }}>

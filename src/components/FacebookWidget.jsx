@@ -1,13 +1,13 @@
 import React from 'react';
-import { FaTwitter, FaRetweet, FaHeart, FaReply } from 'react-icons/fa';
+import { FaTwitter, FaRetweet, FaHeart, FaReply, FaFacebook } from 'react-icons/fa';
 import './css/TwitterWidget.css'; // Regular CSS
 
-const TwitterWidget = () => {
+const FacebookWidget = () => {
   return (
     <>
       {/* Header */}
       <div className="twitter-header">
-        <h2>TWITTER</h2>
+        <h2>FACEBOOK</h2>
       </div>
       <div className="twitter-widget">
 
@@ -22,11 +22,11 @@ const TwitterWidget = () => {
             <div style={{ display: "flex", gap: "5px" }}>
               <h3 style={{ color: "#1e3a8a", fontWeight: "bold" }}>Iwo Land</h3>
               <button className="follow-button">
-                <FaTwitter /> Follow
+                <FaFacebook /> Follow
               </button>
             </div>
             <p style={{ fontSize: "14px", color: "#6b7280" }}>
-              Twitter Page for the people, land and history of IwoLand (Iwo Land)
+              Facebook Page for the people, land and history of IwoLand (Iwo Land)
             </p>
           </div>
         </div>
@@ -127,4 +127,4 @@ const TwitterWidget = () => {
   );
 };
 
-export default TwitterWidget;
+export default FacebookWidget;
