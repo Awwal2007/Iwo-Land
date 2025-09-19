@@ -46,30 +46,30 @@
     padding: 10px 15px ;
 }
 .hero-section{
-    display: flex;
-    gap: 2em;
-    /* justify-content: space-between; */
-    padding: 0px var(--pad);
+  display: flex;
+  gap: 2em;
+  /* justify-content: space-between; */
+  padding: 0px var(--pad);
 }
 .carousel{
-    height: 470px;
-    /* width: 30px; */
+  height: 470px;
+  /* width: 30px; */
 }
 .latest-section{
-    background-color: white;
-    padding: 15px;
+  background-color: white;
+  padding: 15px;
 }
 .home-container{
-    padding: 25px var(--pad);
-    background-color: white;
-    font-family: var(--head-font);
-    margin-bottom: 50px;
+  padding: 25px var(--pad);
+  background-color: white;
+  font-family: var(--head-font);
+  margin-bottom: 50px;
 }
 .home-content{
-    padding: 25px var(--pad);
-    display: flex;
-    /* justify-content: space-between; */
-    gap: 30px;
+  padding: 25px var(--pad);
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 30px;
 }
 .first-side{
     background-color: white;

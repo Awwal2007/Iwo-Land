@@ -1,10 +1,10 @@
 .event-slider {
-  max-width: 780px;
+  max-width: 795px;
   /* margin: 20px auto; */
   /* border-radius: 12px; */
   overflow: hidden;
   font-family: Arial, sans-serif;
-  /* background-color: inherit; */
+  background: #EEEEEE;
 }
 
 .event-banner {
@@ -33,9 +33,9 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 24px;
+  padding: 20px;
   width: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 70%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 8), transparent 98%);
   color: white;
 }
 
@@ -79,7 +79,7 @@
     font-size: 20px;
   }
   .event-banner{
-    height: 250px;
+    height: 400px;
   }
 
   .camera-icon {
