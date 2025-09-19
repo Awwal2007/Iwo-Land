@@ -56,7 +56,7 @@ const Blogs = () => {
                                     {truncatedHead}
                                 </h2>
                                 <div className="event-meta">
-                                <span className="meta-item">🗓 {item.date}</span>
+                                <span className="meta-item">🗓 {new Date(item.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                                 {/* <span className="meta-item">👤 Ayekooto</span> */}
                                 </div>
                                 <p className="event-description">
