@@ -26,7 +26,6 @@ import { useNews } from '../hooks/useNews';
 
 const EventBannerSlider = () => {
   const {news} = useNews();
-  console.log(news.length)
 
   const settings = {
     dots: true,

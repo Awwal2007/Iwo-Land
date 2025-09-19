@@ -43,12 +43,12 @@ const Header = () => {
                     <details>
                     <summary>☰ Menu</summary>
                     <div className='mobile-menu'>
-                        <Button href='/' className={isActive('/')}><TiHome size={24} /> Home</Button>
-                        <Button href='/oluwo' className={isActive('/oluwo')}>OLUWO OF IWO LAND</Button>
-                        <Button href='/iwo-land' className={isActive('/iwo-land')}>Iwo Land</Button>
-                        <Button href='/blogs' className={isActive('/blogs')}>Blogs</Button>
-                        <Button href='/gallery' className={isActive('/gallery')}>Gallery</Button>
-                        <Button href='/resources' className={isActive('/resources')}>RESOURCES AND HELP</Button>
+                        <Button component={Link} to='/' className={isActive('/')}><TiHome size={24} /> Home</Button>
+                        <Button component={Link} to='/oluwo' className={isActive('/oluwo')}>OLUWO OF IWO LAND</Button>
+                        <Button component={Link} to='/iwo-land' className={isActive('/iwo-land')}>Iwo Land</Button>
+                        <Button component={Link} to='/blogs' className={isActive('/blogs')}>Blogs</Button>
+                        <Button component={Link} to='/gallery' className={isActive('/gallery')}>Gallery</Button>
+                        {/* <Button component={Link} to='/resources' className={isActive('/resources')}>RESOURCES AND HELP</Button> */}
                     </div>
                     </details>
                 </div>
