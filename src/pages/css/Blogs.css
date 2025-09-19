@@ -103,7 +103,17 @@
   }
 
   .latest-section{
-    display: none;
+    /* display: none; */
+    margin-top: 80px;
+  }
+
+  .latest-news-card{
+    display: flex;
+    width: 100%;
+  }
+  
+  .hero-section{
+    display: block;
   }
 
   .event-image-container,

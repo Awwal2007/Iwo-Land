@@ -9,6 +9,7 @@ import { SlCalender } from "react-icons/sl";
 import CategorySidebar from './CategoryContent';
 import FacebookWidget from './FacebookWidget';
 import useMediaQuery from './MediaQuery';
+import FacebookPosts from './FacebookPosts';
 
 const SideBar = () => {
     const [data, setData] = React.useState({
@@ -85,11 +86,8 @@ const SideBar = () => {
             
         </div>
         <div>
-            <CategorySidebar />
-        </div>
-        <div>
-            <FacebookWidget />
             {/* <FacebookWidget /> */}
+            <FacebookPosts />
         </div>
     </div>
   )

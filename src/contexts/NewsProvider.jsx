@@ -7,6 +7,7 @@ import { toast } from 'sonner';
 export const NewsProvider = ({ children }) => {
   const [news, setNews] = useState([]);
   const [singleNews, setSingleNews] = useState(null);
+  const [facebookPosts, setFacebookPosts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [creating, setCreating] = useState(false);
   const [error, setError] = useState(null);
@@ -108,10 +109,86 @@ export const NewsProvider = ({ children }) => {
     }
   };
 
+  //Facebook Link
+
+  const createFacebookLink = async (data) => {
+    try {
+      setError(null);
+
+      const response = await fetch(`${baseUrl}/facebook`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) throw new Error('Failed to create facebook Link');
+
+      const created = await response.json();
+
+      if (created.status === "success") {
+        toast.success(created.message);
+        // Immediately add new link to state
+        setFacebookPosts((prev) => [created.facebook, ...prev]);
+      }
+    } catch (err) {
+      setError(err.message);
+      console.error(err);
+    }
+  };
+
+
+  const fetchFacebookLink = async () => {
+    try {
+      setError(null);
+
+
+      // Example: Replace with your own API endpoint or key
+      const response = await fetch(
+        `${baseUrl}/facebook`
+      );
+
+      if (!response.ok) throw new Error('Failed to fetch news');
+
+      const data = await response.json();
+      setFacebookPosts(data.facebook || []);
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  const deleteFacebookLink = async (id) => {
+    try {
+      setError(null);
+
+      const response = await fetch(`${baseUrl}/facebook/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
+
+      if (!response.ok) throw new Error('Failed to delete news');
+
+      const data = await response.json();
+      if(data.status === "success"){
+        toast.success(data.message);
+      }
+
+      // Optimistically remove from state
+      setNews((prev) => prev.filter(item => item._id !== id));
+    } catch (err) {
+      setError(err.message);
+      console.error(err);
+    }
+  };
+
+  
+
 
   // Fetch news on mount
   useEffect(() => {
     fetchNews();
+    fetchFacebookLink();
   }, []);
 
 
@@ -124,7 +201,11 @@ export const NewsProvider = ({ children }) => {
     createNews,
     deleteNews,
     getNewsById,
-    singleNews
+    singleNews,
+    createFacebookLink,
+    fetchFacebookLink,
+    deleteFacebookLink,
+    facebookPosts
   }
   // Optional: also expose fetchNews so you can manually refresh
   return (
