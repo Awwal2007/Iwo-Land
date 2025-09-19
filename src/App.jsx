@@ -15,6 +15,8 @@ import { NewsProvider } from './contexts/NewsProvider.jsx';
 import AdminSignup from './pages/AdminSignup.jsx';
 import AdminLogin from './pages/AdminLogin.jsx';
 import AuthProvider from './contexts/AuthProvider.jsx';
+import ProtectedRoutes from './components/ProtectedRoutes.jsx';
+import NotFound from './components/NotFound.jsx';
 
 const AppContent = () => {
   const location = useLocation();
@@ -55,13 +57,18 @@ const AppContent = () => {
          {/* <Header /> */}
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/iwo-land' element={<IwoLand />} />
+            <Route path='*' element={<NotFound />} />
+            {/* <Route path='/iwo-land' element={<IwoLand />} /> */}
             <Route path='/blogs' element={<Blogs />} />
             <Route path='/gallery' element={<Gallery />} />
-            <Route path='/admin' element={<Admin />} />
+            <Route path='/singleblog/:id' element={<SingleBlog />} />
             <Route path='/admin-login' element={<AdminLogin />} />
             <Route path='/admin-signup' element={<AdminSignup />} />
-            <Route path='/singleblog/:id' element={<SingleBlog />} />
+            
+            <Route element={<ProtectedRoutes />}>
+              <Route path='/admin' element={<Admin />} />
+            </Route>
+            
           </Routes>
           {/* <Footer /> */}
 

@@ -4,7 +4,7 @@ import './css/ButtonBar.css';
 const images = [
   {
     src: '/images/img1.jpg',
-    caption: 'Itsekiri Ukueke dressing',
+    caption: 'Title goes here',
   },
   {
     src: '/images/img2.jpg',
@@ -141,7 +141,7 @@ const ButtonBar = () => {
       
       {/* Footer Bottom */}
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Your Website Name. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Iwo Land. All rights reserved.</p>
       </div>
     </footer>
   );

@@ -15,7 +15,7 @@ const LatestNews = () => {
 
   return (
     <div>
-      <div style={{ fontSize: "15px", }}>
+      <div style={{ fontSize: "15px", marginBottom:  "20px"}}>
         <h1>Latest News</h1>
       </div>
 
@@ -41,13 +41,15 @@ const LatestNews = () => {
           ))
         )
         : (
-          news.map((item, i) => {
-            const truncatedHead = item.title.length > 45 
-              ? item.title.slice(0, 45) + "..." 
+          news
+          .slice(0,3)
+          .map((item, i) => {
+            const truncatedHead = item.title.length > 50 
+              ? item.title.slice(0, 50) + "..." 
               : item.title;
 
-            const truncatedSubHead = item.description.length > 40 
-              ? item.description.slice(0, 40) + "..." 
+            const truncatedSubHead = item.description.length > 55 
+              ? item.description.slice(0, 55) + "..." 
               : item.description;
 
             return (
@@ -55,7 +57,7 @@ const LatestNews = () => {
                 key={i}
                 orientation="horizontal"
                 sx={{ 
-                  width: isMobile ? '100%' : 320,
+                  width: isMobile ? '100%' : 370,
                   mb: 2,
                   '&:hover': { 
                     boxShadow: 'md', 
@@ -63,13 +65,13 @@ const LatestNews = () => {
                   },
                 }}
               >
-                <AspectRatio ratio="1" sx={{ width: 90 }}>
+                <AspectRatio ratio="1" sx={{ width: 100 }}>
                   <img src={item.mainImage} loading="lazy" alt="" />
                 </AspectRatio>
                 <CardContent>
                   <Typography
                     sx={{
-                      width: isMobile ? '100%' : 170,
+                      width: isMobile ? '100%' : 200,
                       borderRadius: 4,
                       bgcolor: 'var(--main-color-shade)',
                       p: 0.3,

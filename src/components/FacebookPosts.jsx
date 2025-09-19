@@ -1,4 +1,4 @@
-import React, {  useEffect, useState } from 'react';
+import React, {  useEffect, } from 'react';
 import { useNews } from '../hooks/useNews';
 import './css/FacebookPosts.css'
 
@@ -8,7 +8,7 @@ const FacebookPosts = () => {
     // fetchFacebookLink
  } = useNews();
 
-  const currentPosts = facebookPosts.slice(0,6);
+  const currentPosts = facebookPosts.slice(0,3);
 
 //   const [currentPage, setCurrentPage] = useState(1);
 //   const postsPerPage = 3;

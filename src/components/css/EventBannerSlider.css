@@ -72,8 +72,9 @@
 /* Responsive */
 @media (max-width: 768px) {
   .banner-image {
-    height: 300px;
+    height: 400px;
   }
+
 
   .banner-title {
     font-size: 20px;

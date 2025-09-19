@@ -9,6 +9,7 @@ export const NewsProvider = ({ children }) => {
   const [singleNews, setSingleNews] = useState(null);
   const [facebookPosts, setFacebookPosts] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [singleNewsLoading, setSingleNewsLoading] = useState(false);
   const [creating, setCreating] = useState(false);
   const [error, setError] = useState(null);
 
@@ -95,17 +96,17 @@ export const NewsProvider = ({ children }) => {
 
   const getNewsById = async (id) => {
     try {
+      setSingleNewsLoading(true);
       const res = await fetch(`${baseUrl}/news/${id}`);
       const data = await res.json();
 
       if (data.status === 'success') {
         setSingleNews(data.news);
-      } else {
-        setSingleNews(null);
       }
     } catch (error) {
       console.error('Error fetching single news:', error);
-      setSingleNews(null);
+    }finally{
+      setSingleNewsLoading(false)
     }
   };
 
@@ -202,6 +203,7 @@ export const NewsProvider = ({ children }) => {
     deleteNews,
     getNewsById,
     singleNews,
+    singleNewsLoading,
     createFacebookLink,
     fetchFacebookLink,
     deleteFacebookLink,
