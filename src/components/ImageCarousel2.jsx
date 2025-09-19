@@ -16,15 +16,15 @@ const ImageCarousel2 = () => {
       transitionTime={700}
     >
       <div>
-        <img src={image1} alt="Slide 1" />
+        <img loading="lazy" src={image1} alt="Slide 1" />
         <p className="legend">Slide One</p>
       </div>
       <div>
-        <img src={image2} alt="Slide 2" />
+        <img loading="lazy" src={image2} alt="Slide 2" />
         <p className="legend">Slide Two</p>
       </div>
       <div>
-        <img src={image3} alt="Slide 3" />
+        <img loading="lazy" src={image3} alt="Slide 3" />
         <p className="legend">Slide Three</p>
       </div>
     </Carousel>

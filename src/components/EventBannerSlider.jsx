@@ -42,7 +42,7 @@ const EventBannerSlider = () => {
     <Slider {...settings} className="event-slider">
       {news.map((slide, index) => (
         <div className="event-banner" key={index}>
-          <img src={slide.mainImage} alt={slide.title} className="banner-image" />
+          <img loading='lazy' src={slide.mainImage} alt={slide.title} className="banner-image" />
           <div className="banner-overlay">
             {/* <div className="tag-row">
               {slide.tags.map((tag, i) => (

@@ -14,6 +14,7 @@ const FacebookWidget = () => {
         {/* Main Profile */}
         <div className="twitter-main-profile">
           <img
+            loading='lazy'
             src="/user.jpg"
             alt="Àlẹ̀ Ìwẹrẹ́"
             className="profile-img"

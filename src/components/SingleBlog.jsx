@@ -45,7 +45,7 @@ const SingleBlog = () => {
   return (
     <div className="single-blog-container">
       <div className="main-image-container">
-        <img src={singleNews.mainImage} alt="Main" className="main-image" />
+        <img loading="lazy" src={singleNews.mainImage} alt="Main" className="main-image" />
       </div>
 
       <div style={{ marginBottom: "50px" }}>
@@ -56,9 +56,9 @@ const SingleBlog = () => {
       <div className="sub-section-container">
         <div className="sub-section" key={singleNews._id}>
           <div className='sub-image-container'>
-            <img src={singleNews.image1} alt={`Sub ${singleNews._id}`} className="sub-image" />
-            <img src={singleNews.image2} alt={`Sub ${singleNews._id}`} className="sub-image" />
-            <img src={singleNews.image3} alt={`Sub ${singleNews._id}`} className="sub-image" />
+            <img loading="lazy" src={singleNews.image1} alt={`Sub ${singleNews._id}`} className="sub-image" />
+            <img loading="lazy" src={singleNews.image2} alt={`Sub ${singleNews._id}`} className="sub-image" />
+            <img loading="lazy" src={singleNews.image3} alt={`Sub ${singleNews._id}`} className="sub-image" />
           </div>
         </div>
       </div>
