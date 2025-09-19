@@ -51,7 +51,7 @@ const EventBannerSlider = () => {
             </div> */}
             <h1 className="banner-title">{slide.title}</h1>
             <div className="banner-meta">
-              <span>🗓 {slide.date}</span>
+              <span>🗓 {new Date(slide.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
               {/* <span>👤 {slide.author}</span> */}
             </div>
           </div>
