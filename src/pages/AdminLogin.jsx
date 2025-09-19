@@ -1,6 +1,7 @@
 // src/pages/LoginPage.js
 import React, { useState } from 'react';
 import { useAuth } from '../hooks/useAuth';
+import './css/SignupPage.css'; 
 
 const AdminLogin = () => {
   const { signin } = useAuth();
@@ -21,11 +22,10 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8">
-        <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Login</h2>
+    <div className="signup-container">
         {error && <p className="text-red-500 text-sm mb-4 text-center">{error}</p>}
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form className="signup-form" onSubmit={handleSubmit} >
+          <h2>Create Admin Account</h2>
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-600 mb-1">
               Email
@@ -64,7 +64,6 @@ const AdminLogin = () => {
           </button>
         </form>
       </div>
-    </div>
   );
 };
 

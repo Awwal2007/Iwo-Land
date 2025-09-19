@@ -20,9 +20,13 @@ const AppContent = () => {
   const location = useLocation();
   const hideHeaderRoutes = [
     '/admin',
+    '/admin-signup',
+    '/admin-login',
   ];
   const hideFooterRoutes = [
-    '/admin'
+    '/admin',
+    '/admin-signup',
+    '/admin-login',
   ];
 
   const shouldHideFooter = hideFooterRoutes.some((route) => {

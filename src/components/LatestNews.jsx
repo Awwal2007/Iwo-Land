@@ -6,18 +6,20 @@ import CardContent from '@mui/joy/CardContent';
 import Chip from '@mui/joy/Chip';
 import Typography from '@mui/joy/Typography';
 
-import news from './news'
+import { useNews } from '../hooks/useNews';
+
 
 
 const LatestNews = () => {
+    const {news} = useNews();
   return (
     <div>
         <div>
             <h1>Latest</h1>
         </div>
         {news.map((item, i) => {
-            const truncatedHead = item.head.length > 30 ? item.head.slice(0, 30) + "..." : item.head;
-            const truncatedSubHead = item.subHead.length > 40 ? item.subHead.slice(0, 40) + "..." : item.subHead;
+            const truncatedHead = item.title.length > 30 ? item.title.slice(0, 30) + "..." : item.title;
+            const truncatedSubHead = item.description.length > 40 ? item.description.slice(0, 40) + "..." : item.description;
 
             return (
                 <Card
@@ -61,7 +63,7 @@ const LatestNews = () => {
                             <Link 
                                 overlay
                                 underline="none"
-                                href={`/singleblog/${item.id}`}
+                                href={`/singleblog/${item?._id}`}
                                 sx={{
                                     color: 'black',
                                     fontFamily: "var(--head-font)",

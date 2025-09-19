@@ -7,10 +7,12 @@ import LatestNews from '../components/LatestNews'
 import './css/Blogs.css'
 // import image from '../assets/IMG-20250722-WA0088.jpg'
 import EventBannerSlider from '../components/EventBannerSlider'
+import { useNews } from '../hooks/useNews'
 
-import news from '../components/news'
+
 
 const Blogs = () => {
+    const {news} = useNews();
   return (
     <div>
         <div className='marquee-container'>
@@ -32,10 +34,10 @@ const Blogs = () => {
             <div style={{background: "none", padding: "0px"}} className='first-side'>
                 {/* Event */}
                 {news.map((item, i)=>{
-                    const truncatedHead = item.head.length > 40 ? item.head.slice(0, 40) + "..." : item.head;
-                    const truncatedSubHead = item.subHead.length > 100 ? item.subHead.slice(0, 100) + "..." : item.subHead;
+                    const truncatedHead = item.title.length > 40 ? item.title.slice(0, 40) + "..." : item.title;
+                    const truncatedSubHead = item.description.length > 100 ? item.description.slice(0, 100) + "..." : item.description;
                     // const truncatedDescription = item.description.length > 30 ? item.description.slice(0, 30) + "..." : item.description;
-                    return (<Link to={`/singleblog/${item.id}`} key={i} className='event-card-container' >
+                    return (<Link to={`/singleblog/${item?._id}`} key={i} className='event-card-container' >
                         <div className="event-card">
                             {/* Left: Image */}
                             <div className="event-image-container">
@@ -51,7 +53,7 @@ const Blogs = () => {
                             <div className="event-content">
                                 {/* <span className="event-category">Iwo People</span> */}
                                 <h2 className="event-title">
-                                {truncatedHead}
+                                    {truncatedHead}
                                 </h2>
                                 <div className="event-meta">
                                 <span className="meta-item">🗓 {item.date}</span>

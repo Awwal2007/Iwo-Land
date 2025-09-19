@@ -83,8 +83,8 @@ const AuthProvider = ({ children }) => {
             });
             const data = await res.json();
             if(data.status === "success"){
-                if(data.user.role !== "buyer"){
-                    toast.error("this account is not for buyer, login as a seller")
+                if(data.user.role !== "admin"){
+                    toast.error("this account is not for admin, login as a admin")
                     return
                 }
                 if(data.user.isVerified){
@@ -93,9 +93,9 @@ const AuthProvider = ({ children }) => {
                     // console.log(data.user);          
                     localStorage.setItem('accessToken', data.accessToken)
                     localStorage.setItem('user', JSON.stringify(data.user))
-                    navigate("/")
+                    navigate("/admin");
                 }else{
-                    toast.error("Please verify your email before logging in")
+                    toast.error("Please verify your email before logging in");
                 }
             }else{
                 toast.error(data.message)

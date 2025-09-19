@@ -32,13 +32,13 @@ const AdminSignup = () => {
         <h2>Create Admin Account</h2>
         {error && <p className="error">{error}</p>}
 
-        <label htmlFor="fullname">Full Name</label>
+        <label htmlFor="name">Full Name</label>
         <input
-          id="fullname"
-          name="fullname"
+          id="name"
+          name="name"
           type="text"
           placeholder="John Doe"
-          value={formData.fullname || ''}
+          value={formData.name || ''}
           onChange={handleInput}
           required
         />
