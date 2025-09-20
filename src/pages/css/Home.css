@@ -270,6 +270,10 @@
   width: 100%;
 }
 
+.image-carousel {
+  touch-action: pan-y; /* allow vertical scrolling while enabling swipe */
+}
+
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .home-content {
