@@ -39,7 +39,7 @@ const Header = () => {
                 <div className='desktop-nav'>
                     <div><Button component={Link} to='/' className='button active'><TiHome size={28} /></Button></div>
                     <div><Button component={Link} to='/' className={isActive('/')}>Home</Button></div>
-                    <div><Button component={Link} to='/oluwo' className={isActive('/oluwo')}>OLUWO OF IWO LAND</Button></div>
+                    {/* <div><Button component={Link} to='/oluwo' className={isActive('/oluwo')}>OLUWO OF IWO LAND</Button></div> */}
                     {/* <div><Button component={Link} to='/iwo-land' className={isActive('/iwo-land')}>Iwo Land</Button></div> */}
                     <div><Button component={Link} to='/blogs' className={isActive('/blogs')}>Blogs</Button></div>
                     <div><Button component={Link} to='/gallery' className={isActive('/gallery')}>Gallery</Button></div>
@@ -52,7 +52,7 @@ const Header = () => {
                     <summary>☰ Menu</summary>
                     <div className='mobile-menu'>
                         <Button component={Link} to='/' className={isActive('/')} onClick={handleLinkClick}><TiHome size={24} /> Home</Button>
-                        <Button component={Link} to='/oluwo' className={isActive('/oluwo')} onClick={handleLinkClick}>OLUWO OF IWO LAND</Button>
+                        {/* <Button component={Link} to='/oluwo' className={isActive('/oluwo')} onClick={handleLinkClick}>OLUWO OF IWO LAND</Button> */}
                         {/* <Button component={Link} to='/iwo-land' className={isActive('/iwo-land')}>Iwo Land</Button> */}
                         <Button component={Link} to='/blogs' className={isActive('/blogs')} onClick={handleLinkClick}>Blogs</Button>
                         <Button component={Link} to='/gallery' className={isActive('/gallery')} onClick={handleLinkClick}>Gallery</Button>
