@@ -142,7 +142,7 @@
 /* General styles */
 .home-wrapper {
   width: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 
@@ -269,7 +269,7 @@
 }
 
 .image-carousel {
-  touch-action: manipulation; /* allow vertical scrolling while enabling swipe */
+  touch-action: auto !important; /* allow vertical scrolling while enabling swipe */
 }
 
 /* Responsive adjustments */
