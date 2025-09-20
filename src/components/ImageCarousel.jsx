@@ -22,7 +22,7 @@ const ImageCarousel = () => {
             src={img}
             alt={`Slide ${index + 1}`}
             loading="lazy"
-            style={{ width: "100%", height: "500px", objectFit: "cover" }}
+            style={{ width: "100%", height: "400px", objectFit: "cover" }}
           />
         </div>
       ))}
