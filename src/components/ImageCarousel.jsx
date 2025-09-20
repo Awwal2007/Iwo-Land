@@ -8,14 +8,14 @@ const ImageCarousel = () => {
   return (
     <Carousel
       className="image-carousel"
-      // autoPlay
+      autoPlay
       infiniteLoop
       showThumbs={false}
       showStatus={false}
       interval={4000}
       transitionTime={700}
-      swipeable
-      emulateTouch
+      // swipeable
+      // emulateTouch
       dynamicHeight={false}
       stopOnHover={false}
       useKeyboardArrows
