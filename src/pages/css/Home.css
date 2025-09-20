@@ -51,9 +51,7 @@
   /* justify-content: space-between; */
   padding: 0px var(--pad);
 }
-.carousel{
-   max-height: 450px;
-}
+
 .latest-section{
   background-color: white;
   padding: 15px;
@@ -132,7 +130,7 @@
     max-height: 400px;
   }
   .carousel{
-    max-height: 400px;
+    /* max-height: 400px; */
   }
   .marquee{
     max-width: 655px;
@@ -340,9 +338,9 @@
     margin-bottom: 25px;
   }
 
-  .carousel{
+  /* .carousel{
     max-height: 450px;
-  }
+  } */
 }
 
 @media (max-width: 480px) {
