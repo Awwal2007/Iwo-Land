@@ -10,12 +10,13 @@ const ImageCarousel = () => {
       className="image-carousel"
       autoPlay
       infiniteLoop
-      swipeable
-      emulateTouch
       showThumbs={false}
       showStatus={false}
       interval={4000}
       transitionTime={700}
+      swipeable
+      emulateTouch
+      useKeyboardArrows
       aria-label="Image carousel of events"
     >
       {[image1, image2, image3].map((img, index) => (
