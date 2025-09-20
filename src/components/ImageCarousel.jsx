@@ -8,7 +8,7 @@ const ImageCarousel = () => {
   return (
     <Carousel
       className="image-carousel"
-      autoPlay
+      // autoPlay
       infiniteLoop
       showThumbs={false}
       showStatus={false}
