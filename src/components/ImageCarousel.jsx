@@ -16,9 +16,12 @@ const ImageCarousel = () => {
       transitionTime={700}
       swipeable
       emulateTouch
+      dynamicHeight={false}
+      stopOnHover={false}
       useKeyboardArrows
       aria-label="Image carousel of events"
     >
+
       {[image1, image2, image3].map((img, index) => (
         <div key={index}>
           <img
