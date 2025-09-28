@@ -17,9 +17,10 @@ const Blogs = () => {
     <div>
         <div className='marquee-container'>
             <div className='latest-news'>Latest News</div>
-            <div>
+            <div className="marquee-wrapper">
                 <CustomMarquee />
             </div>
+            
         </div>
         <div className="hero-section">
             <div className='carousel'>
