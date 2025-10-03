@@ -48,8 +48,8 @@ const LatestNews = () => {
               ? item.title.slice(0, 50) + "..." 
               : item.title;
 
-            const truncatedSubHead = item.description.length > 55 
-              ? item.description.slice(0, 55) + "..." 
+            const truncatedSubHead = item.description.length > 85 
+              ? item.description.slice(0,85) + "..." 
               : item.description;
 
             return (
@@ -69,19 +69,21 @@ const LatestNews = () => {
                   <img src={item.mainImage} loading="lazy" alt="" />
                 </AspectRatio>
                 <CardContent>
+                  
                   <Typography
                     sx={{
-                      width: isMobile ? '100%' : 200,
+                      width: isMobile ? '100%' : 230,
                       borderRadius: 4,
                       bgcolor: 'var(--main-color-shade)',
                       p: 0.3,
-                      fontSize: 12,
+                      fontSize: "15px",
                       color: 'white',
                     }}
                     level="title-lg"
                   >
                     {truncatedHead}
                   </Typography>
+
                   <Typography level="body-sm" sx={{ mb: 1 }}>
                     <Link
                       overlay
@@ -90,7 +92,7 @@ const LatestNews = () => {
                       sx={{
                         color: 'black',
                         fontFamily: "var(--head-font)",
-                        fontSize: "17px",
+                        fontSize:12,
                         fontWeight: "650",
                       }}
                     >
