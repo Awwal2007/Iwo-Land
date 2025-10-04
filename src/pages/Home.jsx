@@ -9,6 +9,7 @@ import { SlPeople } from 'react-icons/sl'
 import MissedArticles from '../components/MissedArticles'
 import { Button } from '@mui/joy'
 import ButtonBar from '../components/BottomBar'
+import Map from '../components/Map';
 
 const Home = () => {
   return (
@@ -66,6 +67,11 @@ const Home = () => {
             <div className='image-carousel-container'>
               <ImageCarousel />
             </div>
+          </div>
+
+          <div className='map'>
+              <h1 className="secondary-carousel-title">Map</h1>
+            <Map />
           </div>
         </div>
         
