@@ -53,54 +53,56 @@ const LatestNews = () => {
               : item.description;
 
             return (
-              <Card
-                key={i}
-                orientation="horizontal"
-                sx={{ 
-                  width: isMobile ? '100%' : 370,
-                  mb: 2,
-                  '&:hover': { 
-                    boxShadow: 'md', 
-                    borderColor: 'neutral.outlinedHoverBorder' 
-                  },
-                }}
-              >
-                <AspectRatio ratio="1" sx={{ width: 100 }}>
-                  <img src={item.mainImage} loading="lazy" alt="" />
-                </AspectRatio>
-                <CardContent>
-                  
-                  <Typography
-                    sx={{
-                      width: isMobile ? '100%' : 230,
-                      borderRadius: 4,
-                      bgcolor: 'var(--main-color-shade)',
-                      p: 0.3,
-                      fontSize: "15px",
-                      color: 'white',
-                    }}
-                    level="title-lg"
-                  >
-                    {truncatedHead}
-                  </Typography>
-
-                  <Typography level="body-sm" sx={{ mb: 1 }}>
-                    <Link
-                      overlay
-                      underline="none"
-                      href={`/singleblog/${item?._id}`}
+              <div className='latest-news-grid'>
+                <Card
+                  key={i}
+                  orientation="horizontal"
+                  sx={{ 
+                    width: isMobile ? '100%' : 370,
+                    mb: 2,
+                    '&:hover': { 
+                      boxShadow: 'md', 
+                      borderColor: 'neutral.outlinedHoverBorder' 
+                    },
+                  }}
+                >
+                  <AspectRatio ratio="1" sx={{ width: 100 }}>
+                    <img src={item.mainImage} loading="lazy" alt="" />
+                  </AspectRatio>
+                  <CardContent>
+                    
+                    <Typography
                       sx={{
-                        color: 'black',
-                        fontFamily: "var(--head-font)",
-                        fontSize:12,
-                        fontWeight: "650",
+                        width: isMobile ? '100%' : 230,
+                        borderRadius: 4,
+                        bgcolor: 'var(--main-color-shade)',
+                        p: 0.3,
+                        fontSize: "15px",
+                        color: 'white',
                       }}
+                      level="title-lg"
                     >
-                      {truncatedSubHead}
-                    </Link>
-                  </Typography>
-                </CardContent>
-              </Card>
+                      {truncatedHead}
+                    </Typography>
+
+                    <Typography level="body-sm" sx={{ mb: 1 }}>
+                      <Link
+                        overlay
+                        underline="none"
+                        href={`/singleblog/${item?._id}`}
+                        sx={{
+                          color: 'black',
+                          fontFamily: "var(--head-font)",
+                          fontSize:12,
+                          fontWeight: "650",
+                        }}
+                      >
+                        {truncatedSubHead}
+                      </Link>
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </div>
             );
           })
         )
