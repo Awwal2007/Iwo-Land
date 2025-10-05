@@ -248,7 +248,7 @@
 }
 
 .archive-link:hover {
-  color: #d4b15b;
+  color: var(--main-color-shade);
   text-decoration: underline;
 }
 

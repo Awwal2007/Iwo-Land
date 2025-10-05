@@ -20,7 +20,9 @@ const Gallery = () => {
         <div className="gallery-container">
           <h1 className="gallery-title">📷 Iwo Land Gallery</h1>
           <div className="gallery-grid">
-            {galleryImages.map((img) => (
+            {galleryImages
+            .slice(0, 10)
+            .map((img) => (
               <div
                 key={img.id}
                 className="gallery-item"
