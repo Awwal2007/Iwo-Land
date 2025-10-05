@@ -5,6 +5,8 @@ import image1 from '../assets/IMG-20250722-WA0086.jpg'
 import image2 from '../assets/IMG-20250722-WA0088.jpg'
 import image3 from '../assets/IMG-20250722-WA0090.jpg'
 import image4 from '../assets/IMG-20250722-WA0088.jpg'
+import { Link } from 'react-router-dom';
+import { useNews } from '../hooks/useNews';
 
 const missedArticles = [
   {
@@ -37,7 +39,10 @@ const missedArticles = [
   },
 ];
 
+
+
 const MissedArticles = () => {
+  const {news} = useNews()
   return (
     <div className="missed-container">
       <div className="missed-header">
@@ -45,29 +50,31 @@ const MissedArticles = () => {
       </div>
 
       <div className="missed-grid">
-        {missedArticles.map((article, idx) => (
-          <div key={idx} className="missed-card">
+        {news
+        .slice(3, 7)
+        .map((article, idx) => (
+          <Link to={`/singleblog/${article?._id}`} key={idx} className="missed-card">
             <div
               className="missed-image"
-              style={{ backgroundImage: `url(${article.image})` }}
+              style={{ backgroundImage: `url(${article.mainImage})` }}
             >
               <div className="image-overlay"></div>
-              <div className="missed-categories">
+              {/* <div className="missed-categories">
                 {article.categories.map((cat, i) => (
                   <span key={i} className="missed-category">
                     {cat}
                   </span>
                 ))}
-              </div>
+              </div> */}
             </div>
             <div className="missed-content">
               <h3>{article.title}</h3>
-              <div className="missed-meta">
+              {/* <div className="missed-meta">
                 <span><FaClock /> {article.date}</span>
                 <span><FaUser /> {article.author}</span>
-              </div>
+              </div> */}
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
