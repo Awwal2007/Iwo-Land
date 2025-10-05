@@ -6,7 +6,8 @@ import "swiper/css/navigation";
 
 import image1 from "../assets/telu and governor.jpeg";
 import image2 from "../assets/images (2).jpg";
-import image3 from "../assets/687cb3f3621b80.57544337Processed.jpg";
+import image3 from "../assets/skdfjdjksldfd.jpg";
+import image4 from "../assets/687cb3f3621b80.57544337Processed.jpg";
 
 const ImageCarousel = () => {
   return (
@@ -23,12 +24,13 @@ const ImageCarousel = () => {
       modules={[Autoplay, Pagination, Navigation]}
       className="image-carousel"
     >
-      {[image1, image2, image3].map((img, index) => (
+      {[image2, image1, image3, image4].map((img, index) => (
         <SwiperSlide key={index}>
           <img
             src={img}
             alt={`Slide ${index + 1}`}
-            style={{ width: "100%", height: "400px", objectFit: "cover" }}
+            style={{ width: "100%", height: "400px", objectFit: "cover",
+              touchAction: "auto", }}
           />
         </SwiperSlide>
       ))}

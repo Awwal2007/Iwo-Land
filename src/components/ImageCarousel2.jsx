@@ -1,35 +1,41 @@
-// src/components/ImageCarousel.jsx
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // carousel styles
-import { Carousel } from "react-responsive-carousel";
-import image1 from "../assets/687cb3f3621b80.57544337Processed.jpg";
-import image2 from "../assets/images (2).jpeg";
-import image3 from "../assets/images (3).jpeg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import image1 from "../assets/skdfjdjksldfd.jpg";
+import image2 from "../assets/486508928_1095071739299793_1232738090195917418_n.jpg";
+import image3 from "../assets/549832359_1235245971949035_2646702673650426791_n.jpg";
+import image4 from "../assets/547194733_1233075732166059_7512918984931517503_n.jpg";
 
 const ImageCarousel2 = () => {
   return (
-    <Carousel
-      autoPlay
-      infiniteLoop
-      showThumbs={false}
-      showStatus={false}
-      interval={4000}
-      transitionTime={700}
+    <Swiper
+      spaceBetween={30}
+      centeredSlides={true}
+      autoplay={{
+        delay: 4000,
+        disableOnInteraction: false,
+      }}
+      loop={true}
+      pagination={{ clickable: true }}
+      navigation={true}
+      modules={[Autoplay, Pagination, Navigation]}
+      className="image-carousel"
     >
-      <div>
-        <img loading="lazy" src={image1} alt="Slide 1" />
-        <p className="legend">Slide One</p>
-      </div>
-      <div>
-        <img loading="lazy" src={image2} alt="Slide 2" />
-        <p className="legend">Slide Two</p>
-      </div>
-      <div>
-        <img loading="lazy" src={image3} alt="Slide 3" />
-        <p className="legend">Slide Three</p>
-      </div>
-    </Carousel>
+      {[image2, image1, image3, image4].map((img, index) => (
+        <SwiperSlide key={index}>
+          <img
+            src={img}
+            alt={`Slide ${index + 1}`}
+            style={{ width: "100%", height: "400px", objectFit: "cover",
+              touchAction: "auto", }}
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 
 export default ImageCarousel2;
-

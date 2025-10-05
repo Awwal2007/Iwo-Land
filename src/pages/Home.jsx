@@ -10,6 +10,7 @@ import MissedArticles from '../components/MissedArticles'
 import { Button } from '@mui/joy'
 import ButtonBar from '../components/BottomBar'
 import Map from '../components/Map';
+import ImageCarousel2 from '../components/ImageCarousel2';
 
 const Home = () => {
   return (
@@ -65,7 +66,7 @@ const Home = () => {
           <div className="secondary-carousel-section">
             <h1 className="secondary-carousel-title">The Iwo People</h1>
             <div className='image-carousel-container'>
-              <ImageCarousel />
+              <ImageCarousel2 />
             </div>
           </div>
 
