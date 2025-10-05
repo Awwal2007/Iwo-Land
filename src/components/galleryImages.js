@@ -6,7 +6,7 @@ import img5 from '../assets/jhksdksldjls.jpg';
 import img6 from '../assets/558067131_1249908490482783_6058056672689325117_n.jpg';
 import img7 from '../assets/skdfjdjksldfd.jpg';
 import img8 from '../assets/547194733_1233075732166059_7512918984931517503_n.jpg';
-import img9 from '../assets/images (5).jpeg';
+import img9 from '../assets/river.jpg';
 import img10 from '../assets/images (5).jpeg';
 
 const galleryImages = [
@@ -18,6 +18,7 @@ const galleryImages = [
   { id: 6, src: img6, alt: "Oluwo " },
   { id: 7, src: img7, alt: "Iwo People " },
   { id: 8, src: img8, alt: "Iwo Boxing Association " },
+  { id: 8, src: img9, alt: "Iwo River " },
 ];
 
 export default galleryImages;
