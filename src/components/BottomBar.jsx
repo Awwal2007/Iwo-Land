@@ -1,18 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './css/ButtonBar.css';
+import image1 from '../assets/jhdhfjsdfsd.jpg';
+import image2 from '../assets/hjsdjlkaj.jpg';
+import image3 from '../assets/iwo-market.jpg';
 
 const images = [
   {
-    src: '/images/img1.jpg',
-    caption: 'Title goes here',
+    src: image1,
+    caption: 'Oluwo stadium',
   },
   {
-    src: '/images/img2.jpg',
-    caption: 'Title goes here',
+    src: image2,
+    caption: 'Oluwo with his subject',
   },
   {
-    src: '/images/img3.jpg',
-    caption: 'Another caption',
+    src: image3,
+    caption: 'Iwo Market',
   },
 ];
 
@@ -22,6 +25,15 @@ const ButtonBar = () => {
   const handleDotClick = (index) => setCurrent(index);
   const nextImage = () => setCurrent((prev) => (prev + 1) % images.length);
   const prevImage = () => setCurrent((prev) => (prev - 1 + images.length) % images.length);
+
+  // ✅ Auto-slide effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 4000); // every 4 seconds
+
+    return () => clearInterval(interval); // cleanup on unmount
+  }, []);
 
   return (
     <footer className="footer-container">

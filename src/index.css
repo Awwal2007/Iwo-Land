@@ -14,10 +14,11 @@
 }
 
 :root{
-  --main-color : #202f5b;
+  --main-color: #ab833b;
   --main-color-shade: #1151d3;
   --head-font: "Montserrat", sans-serif;
   --menu-font: "Work Sans", sans-serif;
+  --white-shade: #f3eeee;
   --pad: 45px;
 }
 

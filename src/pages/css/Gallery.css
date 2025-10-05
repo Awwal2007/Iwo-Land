@@ -26,6 +26,7 @@
   border-radius: 10px;
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: zoom-in;
 }
 
 .gallery-image {
@@ -45,11 +46,68 @@
   text-align: center;
   color: #555;
 }
+
+/* Responsive */
 @media (max-width: 768px) {
-    .gallery-grid{
-        grid-template-columns: 1fr;
-    }
-    .gallery-container{
-        width: 80vw;
-    }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-container {
+    width: 80vw;
+  }
+}
+
+/* ✅ Zoom Modal Styles */
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  cursor: zoom-out;
+}
+
+.modal-image {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+  animation: zoomIn 0.3s ease-in-out;
+}
+
+.modal-caption {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ff5555;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

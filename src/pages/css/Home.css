@@ -4,17 +4,17 @@
   --main-color-shade: #1151d3;
   --head-font: "Montserrat", sans-serif;
   --menu-font: "Work Sans", sans-serif;
-    --white-shade: #f3eeee;
+  --white-shade: #f3eeee;
 }
 .tags-container{
-    display: flex;
-    /* justify-content: space-between; */
-    gap: 20px;
-    font-family: var(--menu-font);
-    font-weight: 550;
-    padding: 10px var(--pad);
-    /* color: ; */
-    background-color: white;
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 20px;
+  font-family: var(--menu-font);
+  font-weight: 550;
+  padding: 10px var(--pad);
+  /* color: ; */
+  background-color: white;
 }
 .tag-menu{
     color: var(--main-color-shade);

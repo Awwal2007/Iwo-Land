@@ -2,7 +2,7 @@
 
 /* Footer Container */
 .footer-container {
-  background: linear-gradient(135deg, #2563eb 0%, #2563eb 100%);
+  background: var(--main-color);
   color: #ecf0f1;
   padding: 40px 20px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -26,7 +26,7 @@
 .section-header {
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 2px solid #ab833b;
+  border-bottom: 2px solid var(--main-color-shade);
 }
 
 .section-title {
@@ -163,7 +163,7 @@
   padding: 12px 15px;
   border: 1px solid #34495e;
   border-radius: 5px;
-  background: #2c3e50;
+  background: var(--main-color);
   color: #ecf0f1;
   font-size: 1rem;
   transition: border-color 0.3s ease;
@@ -176,10 +176,11 @@
 
 .form-input::placeholder {
   color: #ffffff;
+  font-size: 10px;
 }
 
 .submit-btn {
-  background: #ab833b;
+  background: var(--main-color-shade)!important;
   color: white;
   border: none;
   border-radius: 5px;
@@ -216,9 +217,9 @@
 .month-select {
   width: 100%;
   padding: 12px 15px;
-  border: 1px solid #34495e;
+  border: 1px solid ;
   border-radius: 5px;
-  background: #2c3e50;
+  background: var(--main-color);
   color: #ffffff;
   font-size: 1rem;
   appearance: none;
@@ -230,7 +231,7 @@
 
 .month-select:focus {
   outline: none;
-  border-color: #ab833b;
+  border-color: white;
 }
 
 .archives-list {
@@ -240,7 +241,7 @@
 }
 
 .archive-link {
-  color: #ab833b;
+  color: white;
   text-decoration: none;
   transition: color 0.3s ease;
   padding: 5px 0;

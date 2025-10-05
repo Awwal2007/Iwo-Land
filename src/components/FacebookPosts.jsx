@@ -42,27 +42,29 @@ const FacebookPosts = () => {
 
 
     useEffect(() => {
-        if (window.FB) window.FB.XFBML.parse();
+      if (window.FB) window.FB.XFBML.parse();
     }, [currentPosts]);
 
 
   return (
     <div className="facebook-posts-container">
-        <h2>Facebook Posts</h2>
+      <h2>Facebook Posts</h2>
 
-        <div className="posts-list">
-            {currentPosts.map((post) => (
-            <div key={post._id} className="post-card">
-                <div className="fb-post" data-href={post.facebookLink} data-width="500"></div>
-            </div>
-            ))}
+      <div className="posts-list">
+        {currentPosts
+        .slice(0, 2)
+        .map((post) => (
+        <div key={post._id} className="post-card">
+            <div className="fb-post" data-href={post.facebookLink} data-width="300"></div>
         </div>
+        ))}
+      </div>
 
-        {/* <div className="pagination">
-            <button className="btn" onClick={prevPage} disabled={currentPage === 1}>Prev</button>
-            <span className="page-indicator">Page {currentPage} of {totalPages}</span>
-            <button className="btn" onClick={nextPage} disabled={currentPage === totalPages}>Next</button>
-        </div> */}
+      {/* <div className="pagination">
+        <button className="btn" onClick={prevPage} disabled={currentPage === 1}>Prev</button>
+        <span className="page-indicator">Page {currentPage} of {totalPages}</span>
+        <button className="btn" onClick={nextPage} disabled={currentPage === totalPages}>Next</button>
+      </div> */}
     </div>
 
     );
