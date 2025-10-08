@@ -17,6 +17,7 @@ import AdminLogin from './pages/AdminLogin.jsx';
 import AuthProvider from './contexts/AuthProvider.jsx';
 import ProtectedRoutes from './components/ProtectedRoutes.jsx';
 import NotFound from './components/NotFound.jsx';
+import ScrollToTop from './components/ScrollToTop.jsx';
 
 const AppContent = () => {
   const location = useLocation();
@@ -90,6 +91,8 @@ function App() {
   return (
     <>
      <BrowserRouter>
+        <ScrollToTop />
+
         <AppContent/>
      </BrowserRouter>
     </>

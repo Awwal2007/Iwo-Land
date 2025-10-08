@@ -7,7 +7,7 @@ import img6 from '../assets/558067131_1249908490482783_6058056672689325117_n.jpg
 import img7 from '../assets/skdfjdjksldfd.jpg';
 import img8 from '../assets/547194733_1233075732166059_7512918984931517503_n.jpg';
 import img9 from '../assets/river.jpg';
-import img10 from '../assets/images (5).jpeg';
+// import img10 from '../assets/images (5).jpeg';
 
 const galleryImages = [
   { id: 1, src: img1, alt: "Oluwo" },
