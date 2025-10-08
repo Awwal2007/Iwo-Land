@@ -20,7 +20,7 @@
 
 .main-image {
   width: 100%;
-  height: auto;
+  height: 110vh;
   border-radius: 14px;
   object-fit: cover;
   display: block;
@@ -82,6 +82,9 @@
   .description {
     font-size: 1rem;
   }
+  .main-image{
+    height: 60vh;    
+  }
 }
 
 @media (max-width: 600px) {
@@ -93,5 +96,8 @@
   }
   .sub-image {
     height: 180px;
+  }
+  .main-image{
+    height: 40vh;    
   }
 }
