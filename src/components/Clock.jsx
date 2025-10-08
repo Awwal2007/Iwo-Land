@@ -25,8 +25,8 @@ function Clock() {
 
   return (
     <div style={{color: 'white', display: "flex", gap: "10px"}} className="text-center p-4">
-      <p style={{padding: "3px"}} className="text-xl font-medium">{formattedDate}</p>
-      <p style={{background: "var(--main-color-shade)", padding: "2px", fontWeight: "580", borderRadius: "5px", fontSize: "15px"}} className="text-2xl font-bold mt-2">{formattedTime}</p>
+      <p id="date" style={{padding: "3px"}} className="text-xl font-medium">{formattedDate}</p>
+      <p id="time" className="text-2xl font-bold mt-2">{formattedTime}</p>
     </div>
   );
 }

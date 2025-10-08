@@ -276,6 +276,14 @@
   margin-top: 50px;
 }
 
+#time{
+  background: var(--main-color-shade);
+  padding: 2px; 
+  font-weight: 580; 
+  border-radius: 5px; 
+  font-size: 15px;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
@@ -298,6 +306,12 @@
   .carousel, .latest-section {
     width: 100%;
 
+  }
+  #time{
+    font-size: 14px !important;
+  }
+  #date{
+    font-size: 14px !important;
   }
 }
 
