@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import CustomMarquee from "../components/CustomMarquee";
-import ImageCarousel from "../components/ImageCarousel";
 import SideBar from "../components/SideBar";
 import LatestNews from "../components/LatestNews";
 import "./css/Blogs.css";
@@ -12,11 +11,9 @@ import { Helmet } from "react-helmet-async";
 const Blogs = () => {
   const { news, loading, error } = useNews();
 
-  // Pagination setup
   const [currentPage, setCurrentPage] = useState(1);
   const newsPerPage = 8;
 
-  // Calculate pagination
   const totalPages = Math.ceil(news.length / newsPerPage);
   const startIndex = (currentPage - 1) * newsPerPage;
   const currentNews = news.slice(startIndex, startIndex + newsPerPage);
@@ -48,7 +45,7 @@ const Blogs = () => {
       </Helmet>
 
       <div>
-        {/* Top section with marquee + carousel */}
+        {/* Top Section */}
         <div className="marquee-container">
           <div className="latest-news">Latest News</div>
           <div className="marquee-wrapper">
@@ -70,11 +67,11 @@ const Blogs = () => {
           <div className="first-side no-padding">
             {/* Skeleton Loader */}
             {loading && (
-              <div className="skeleton-carousel">
-                {[...Array(1)].map((_, index) => (
-                  <div key={index} className="skeleton-slide">
-                    <div className="skeleton-img" />
-                    <div className="skeleton-text">
+              <div className="skeleton-news-list">
+                {[...Array(8)].map((_, index) => (
+                  <div key={index} className="skeleton-event-card">
+                    <div className="skeleton-event-image" />
+                    <div className="skeleton-event-content">
                       <div className="skeleton-line title" />
                       <div className="skeleton-line" />
                       <div className="skeleton-line short" />
@@ -90,7 +87,7 @@ const Blogs = () => {
               <p className="no-news-text">No news available yet.</p>
             )}
 
-            {/* Render News */}
+            {/* News List */}
             {!loading &&
               currentNews.map((item) => {
                 const truncatedHead =
@@ -137,12 +134,11 @@ const Blogs = () => {
                 );
               })}
 
-            {/* Pagination Controls */}
+            {/* Pagination */}
             {!loading && news.length > 0 && (
               <div className="pagination">
                 <button
                   className="page-btn"
-                  role="link"
                   onClick={handlePrevPage}
                   disabled={currentPage === 1}
                 >
@@ -154,7 +150,6 @@ const Blogs = () => {
                 <button
                   className="page-btn"
                   onClick={handleNextPage}
-                  role="link"
                   disabled={currentPage === totalPages}
                 >
                   Next ➡

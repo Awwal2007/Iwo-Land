@@ -1,31 +1,12 @@
-import React from 'react';
-import Slider from 'react-slick';
-import './css/EventBannerSlider.css';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-// import image from '../assets/IMG-20250722-WA0089.jpg'
-
-import { useNews } from '../hooks/useNews';
-
-// const sliderData = [
-//   {
-//     image: image,
-//     tags: ['Iwo People', 'Oluwo of Iwo'],
-//     title: "Iwo ongoing road Dualization...",
-//     date: '20 June 2025',
-//     author: 'Ayekooto',
-//   },
-//   {
-//     image: '/images/ghigho-14.jpg',
-//     tags: ['Itsekiri People'],
-//     title: "14th Ghigho Aghofen: A Kaleidoscope of Culture at the Aghofen",
-//     date: '21 June 2025',
-//     author: 'Akorede',
-//   },
-// ];
+import React from "react";
+import Slider from "react-slick";
+import "./css/EventBannerSlider.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { useNews } from "../hooks/useNews";
 
 const EventBannerSlider = () => {
-  const {news} = useNews();
+  const { news, loading } = useNews();
 
   const settings = {
     dots: true,
@@ -38,21 +19,54 @@ const EventBannerSlider = () => {
     arrows: false,
   };
 
+  // ✅ Skeleton UI while loading
+  if (loading) {
+    return (
+      <div className="skeleton-banner-wrapper">
+        {[...Array(1)].map((_, index) => (
+          <div key={index} className="skeleton-banner">
+            <div className="skeleton-banner-image" />
+            <div className="skeleton-banner-content">
+              <div className="skeleton-line title" />
+              <div className="skeleton-line short" />
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  // ✅ Fallback if no news available
+  if (!loading && news.length === 0) {
+    return (
+      <div className="no-banner">
+        <p>No event banners available yet.</p>
+      </div>
+    );
+  }
+
+  // ✅ Actual slider
   return (
     <Slider {...settings} className="event-slider">
       {news.map((slide, index) => (
         <div className="event-banner" key={index}>
-          <img loading='lazy' src={slide.mainImage} alt={slide.title} className="banner-image" />
+          <img
+            loading="lazy"
+            src={slide.mainImage}
+            alt={slide.title}
+            className="banner-image"
+          />
           <div className="banner-overlay">
-            {/* <div className="tag-row">
-              {slide.tags.map((tag, i) => (
-                <span className="tag" key={i}>{tag}</span>
-              ))}
-            </div> */}
             <h1 className="banner-title">{slide.title}</h1>
             <div className="banner-meta">
-              <span>🗓 {new Date(slide.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-              {/* <span>👤 {slide.author}</span> */}
+              <span>
+                🗓{" "}
+                {new Date(slide.date).toLocaleDateString(undefined, {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </span>
             </div>
           </div>
         </div>
