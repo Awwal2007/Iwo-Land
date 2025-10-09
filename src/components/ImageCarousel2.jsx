@@ -27,8 +27,9 @@ const ImageCarousel2 = () => {
       {[image2, image1, image3, image4].map((img, index) => (
         <SwiperSlide key={index}>
           <img
+            loading="lazy"
             src={img}
-            alt={`Slide ${index + 1}`}
+            alt='Iwo Land Images'
             style={{ width: "100%", height: "400px", objectFit: "cover",
               touchAction: "auto", }}
           />

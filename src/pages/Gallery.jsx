@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import galleryImages from '../components/galleryImages';
 import './css/Gallery.css';
 import SideBar from '../components/SideBar';
+import { Helmet } from 'react-helmet-async';
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -15,50 +16,64 @@ const Gallery = () => {
   };
 
   return (
-    <div className="home-content">
-      <div className="first-side">
-        <div className="gallery-container">
-          <h1 className="gallery-title">📷 Iwo Land Gallery</h1>
-          <div className="gallery-grid">
-            {galleryImages
-            .slice(0, 10)
-            .map((img) => (
-              <div
-                key={img.id}
-                className="gallery-item"
-                onClick={() => handleImageClick(img)}
-              >
-                <img
-                  loading="lazy"
-                  src={img.src}
-                  alt={img.alt}
-                  className="gallery-image"
-                />
-              </div>
-            ))}
+    <>
+
+      <Helmet>
+        <title>Gallery | Iwo Land</title>
+        <meta name="description" content="Explore stunning photos capturing the culture, people, and heritage of Iwo Land." />
+        <meta property="og:title" content="Iwo Land Gallery" />
+        <meta property="og:description" content="Discover a curated gallery of images from Iwo Land." />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
+      <div className="home-content">
+        <div className="first-side">
+          <div className="gallery-container">
+            <h1 className="gallery-title">📷 Iwo Land Gallery</h1>
+            <div className="gallery-grid">
+              {galleryImages
+              .slice(0, 10)
+              .map((img) => (
+                <div
+                  role='button'
+                  tabIndex="0"
+                  key={img.id}
+                  className="gallery-item"
+                  onClick={() => handleImageClick(img)}
+                >
+                  <img
+                    loading="lazy"
+                    src={img.src}
+                    alt={img.alt}
+                    className="gallery-image"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="second-side">
-        <SideBar />
-      </div>
-
-      {/* ✅ Modal for zoomed image */}
-      {selectedImage && (
-        <div className="image-modal" onClick={closeModal}>
-          <span className="close-btn" onClick={closeModal}>
-            &times;
-          </span>
-          <img
-            src={selectedImage.src}
-            alt={selectedImage.alt}
-            className="modal-image"
-          />
-          <p className="modal-caption">{selectedImage.alt}</p>
+        <div className="second-side">
+          <SideBar />
         </div>
-      )}
-    </div>
+
+        {/* ✅ Modal for zoomed image */}
+        {selectedImage && (
+          <div className="image-modal" onClick={closeModal}>
+            <span className="close-btn" onClick={closeModal}>
+              &times;
+            </span>
+            <img
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              className="modal-image"
+            />
+            <p className="modal-caption">{selectedImage.alt}</p>
+          </div>
+        )}
+      </div>
+    </>
+    
   );
 };
 

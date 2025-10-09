@@ -52,7 +52,6 @@ const FacebookPosts = () => {
 
       <div className="posts-list">
         {currentPosts
-        .slice(0, 2)
         .map((post) => (
         <div key={post._id} className="post-card">
             <div className="fb-post" data-href={post.facebookLink} data-width="300"></div>

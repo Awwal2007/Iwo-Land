@@ -27,7 +27,7 @@ const Header = () => {
     
     return (
         <>
-        <div className='header-container'>
+        <header className='header-container'>
             <div className='clock-container'>
                 <Clock/>
             </div>
@@ -61,7 +61,7 @@ const Header = () => {
                     </details>
                 </div>
             </div>
-        </div>
+        </header>
         </>
     );
 }

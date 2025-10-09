@@ -216,10 +216,10 @@ const Admin = () => {
               </div>
               
               <div className="preview-row">
-                {imagePreviews.mainImage && <div className="preview-container"><img src={imagePreviews.mainImage} alt='mainImage' className="preview" /><span>Main</span></div>}
-                {imagePreviews.image1 && <div className="preview-container"><img src={imagePreviews.image1} alt='image1' className="preview" /><span>Image 1</span></div>}
-                {imagePreviews.image2 && <div className="preview-container"><img src={imagePreviews.image2} alt='image2' className="preview" /><span>Image 2</span></div>}
-                {imagePreviews.image3 && <div className="preview-container"><img src={imagePreviews.image3} alt='image3' className="preview" /><span>Image 3</span></div>}
+                {imagePreviews.mainImage && <div className="preview-container"><img loading='lazy' src={imagePreviews.mainImage} alt='mainImage' className="preview" /><span>Main</span></div>}
+                {imagePreviews.image1 && <div className="preview-container"><img loading='lazy' src={imagePreviews.image1} alt='image1' className="preview" /><span>Image 1</span></div>}
+                {imagePreviews.image2 && <div className="preview-container"><img loading='lazy' src={imagePreviews.image2} alt='image2' className="preview" /><span>Image 2</span></div>}
+                {imagePreviews.image3 && <div className="preview-container"><img loading='lazy' src={imagePreviews.image3} alt='image3' className="preview" /><span>Image 3</span></div>}
               </div>
               
               <button disabled={creating} type="submit" className="submit-btn">
@@ -251,7 +251,7 @@ const Admin = () => {
                     {events.map((ev) => (
                       <tr key={ev._id}>
                         <td>
-                          <img src={ev.mainImage} alt={ev.title} className="thumb" />
+                          <img loading='lazy' src={ev.mainImage} alt={ev.title} className="thumb" />
                         </td>
                         <td>
                           {expandedRows[ev._id]?.title ? ev.title : truncate(ev.title, 20)}
@@ -277,9 +277,9 @@ const Admin = () => {
                           )}
                         </td>
                         <td className="extra-images">
-                          {ev.image1 && <img src={ev.image1} alt={ev.title} className="thumb" />}
-                          {ev.image2 && <img src={ev.image2} alt={ev.title} className="thumb" />}
-                          {ev.image3 && <img src={ev.image3} alt={ev.title} className="thumb" />}
+                          {ev.image1 && <img loading='lazy' src={ev.image1} alt={ev.title} className="thumb" />}
+                          {ev.image2 && <img loading='lazy' src={ev.image2} alt={ev.title} className="thumb" />}
+                          {ev.image3 && <img loading='lazy' src={ev.image3} alt={ev.title} className="thumb" />}
                         </td>
                         <td>
                           <button onClick={() => removeEvent(ev._id)} className="delete-btn">Delete</button>

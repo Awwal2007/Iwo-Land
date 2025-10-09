@@ -4,14 +4,14 @@ import ButtonBar from './BottomBar'
 
 const Footer = () => {
   return (
-    <div>
+    <footer>
         <div>
             <MissedArticles />
         </div>
         <div>
             <ButtonBar />
         </div>
-    </div>
+    </footer>
   )
 }
 

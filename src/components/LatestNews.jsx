@@ -53,7 +53,7 @@ const LatestNews = () => {
               : item.description;
 
             return (
-              <div className='latest-news-grid'>
+              <div key={item?._id} className='latest-news-grid'>
                 <Card
                   key={i}
                   orientation="horizontal"
@@ -67,7 +67,7 @@ const LatestNews = () => {
                   }}
                 >
                   <AspectRatio ratio="1" sx={{ width: 100 }}>
-                    <img src={item.mainImage} loading="lazy" alt="" />
+                    <img src={item.mainImage} loading="lazy" alt={item.title} />
                   </AspectRatio>
                   <CardContent>
                     

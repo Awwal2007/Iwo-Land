@@ -56,9 +56,9 @@ const SingleBlog = () => {
       <div className="sub-section-container">
         <div className="sub-section" key={singleNews._id}>
           <div className='sub-image-container'>
-            <img loading="lazy" src={singleNews.image1} alt={`Sub ${singleNews._id}`} className="sub-image" />
-            <img loading="lazy" src={singleNews.image2} alt={`Sub ${singleNews._id}`} className="sub-image" />
-            <img loading="lazy" src={singleNews.image3} alt={`Sub ${singleNews._id}`} className="sub-image" />
+            <img loading="lazy" src={singleNews.image1} alt={singleNews.title} className="sub-image" />
+            <img loading="lazy" src={singleNews.image2} alt={singleNews.title} className="sub-image" />
+            <img loading="lazy" src={singleNews.image3} alt={singleNews.title} className="sub-image" />
           </div>
         </div>
       </div>
