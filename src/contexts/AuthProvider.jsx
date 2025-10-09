@@ -19,9 +19,7 @@ const AuthProvider = ({ children }) => {
         try {
             const res = await axios.get(`${baseUrl}/users/${userId}` )
             const data = await res.data;
-            console.log(data);
             setUsers(data.user);
-            console.log(users);
             
         } catch (error) {
             console.log(error);            
@@ -46,7 +44,6 @@ const AuthProvider = ({ children }) => {
             }else{
                 toast.error(data.message)
             }
-            console.log(data);
             
         } catch (error) {
             console.log(error);            
@@ -88,8 +85,7 @@ const AuthProvider = ({ children }) => {
                     return
                 }
                 if(data.user.isVerified){
-                    toast.success(data.message);
-                    console.log(data.message);                
+                    toast.success(data.message);               
                     // console.log(data.user);          
                     localStorage.setItem('accessToken', data.accessToken)
                     localStorage.setItem('user', JSON.stringify(data.user))
@@ -135,8 +131,7 @@ const AuthProvider = ({ children }) => {
         setVerifyingAccount(true)
         try {
             const res = await axios.post(`${baseUrl}/auth/verify/${token}`)
-            const data = res.data
-            console.log(data);
+            const data = res.data;
             setVerificationData(data)
         } catch (error) {
             console.log(error);            

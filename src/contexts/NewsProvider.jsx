@@ -53,7 +53,6 @@ export const NewsProvider = ({ children }) => {
       if (!response.ok) throw new Error('Failed to create news');
 
       const created = await response.json();
-      console.log(created);
       
       if(created.status === "success"){
         toast.success(created.message);
@@ -61,8 +60,7 @@ export const NewsProvider = ({ children }) => {
       // Update state immediately (optimistic UI)
       setNews((prev) => [created, ...prev]);
     } catch (err) {
-      setError(err.message);
-      console.log(err);      
+      setError(err.message); 
     }finally{
       setCreating(false);
     }
@@ -90,7 +88,6 @@ export const NewsProvider = ({ children }) => {
       setNews((prev) => prev.filter(item => item._id !== id));
     } catch (err) {
       setError(err.message);
-      console.error(err);
     }
   };
 
@@ -133,7 +130,6 @@ export const NewsProvider = ({ children }) => {
       }
     } catch (err) {
       setError(err.message);
-      console.error(err);
     }
   };
 
@@ -179,7 +175,6 @@ export const NewsProvider = ({ children }) => {
       setNews((prev) => prev.filter(item => item._id !== id));
     } catch (err) {
       setError(err.message);
-      console.error(err);
     }
   };
 
