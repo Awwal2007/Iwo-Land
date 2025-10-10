@@ -4,6 +4,7 @@ import "./css/EventBannerSlider.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useNews } from "../hooks/useNews";
+import { Link } from "react-router-dom";
 
 const EventBannerSlider = () => {
   const { news, loading } = useNews();
@@ -48,8 +49,8 @@ const EventBannerSlider = () => {
   // ✅ Actual slider
   return (
     <Slider {...settings} className="event-slider">
-      {news.map((slide, index) => (
-        <div className="event-banner" key={index}>
+      {news.map((slide) => (
+        <Link to={`/singleblog/${slide._id}`} className="event-banner" key={slide._id}>
           <img
             loading="lazy"
             src={slide.mainImage}
@@ -69,7 +70,7 @@ const EventBannerSlider = () => {
               </span>
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </Slider>
   );

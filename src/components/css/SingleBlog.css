@@ -95,9 +95,12 @@
     gap: 15px;
   }
   .sub-image {
-    height: 180px;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
   }
   .main-image{
     height: 40vh;    
   }
+
 }
