@@ -17,8 +17,8 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <meta name="google-site-verification" content="Z8KOXq8ILNK0QJxU6ib1jyh24h7Of2VEKZlagRE35JA" />
         <title>Home | Iwo Land</title>
+        <meta name="google-site-verification" content="Z8KOXq8ILNK0QJxU6ib1jyh24h7Of2VEKZlagRE35JA" />
         <meta
           name="description"
           content="Discover Iwo Land — a rich Yoruba cultural center in Osun State, Nigeria. Learn about its people, heritage, and historical significance."

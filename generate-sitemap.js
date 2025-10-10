@@ -2,7 +2,7 @@ import { SitemapStream, streamToPromise } from "sitemap";
 import { createWriteStream } from "fs";
 
 async function generateSitemap() {
-  const sitemap = new SitemapStream({ hostname: "https://www.iwoland.com" });
+  const sitemap = new SitemapStream({ hostname: "https://iwo-land.vercel.app" });
 
   // List all pages
   const links = [
