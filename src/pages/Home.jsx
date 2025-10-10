@@ -14,6 +14,23 @@ import ImageCarousel2 from '../components/ImageCarousel2';
 import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Iwo Land",
+    "url": "https://iwo-land.vercel.app",
+    "logo": "https://iwo-land.vercel.app/favicon.jpg",
+    "sameAs": [
+      "https://facebook.com/iwoland",
+      "https://instagram.com/iwoland",
+      "https://twitter.com/iwoland"
+    ],
+    // "contactPoint": {
+    //   "@type": "ContactPoint",
+    //   "telephone": "+2348000000000",
+    //   "contactType": "Customer Service"
+    // }
+  };
   return (
     <>
       <Helmet>
@@ -30,6 +47,9 @@ const Home = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://Iwo-Land.com" />
+        <script type="application/ld+json">
+          {JSON.stringify(jsonLd)}
+        </script>
       </Helmet>
 
       <div className="home-wrapper">

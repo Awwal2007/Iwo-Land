@@ -31,18 +31,31 @@ const Blogs = () => {
   return (
     <>
       <Helmet>
-        <title>Blogs | Iwo Land</title>
-        <meta
-          name="description"
-          content="Read the latest news, stories, and cultural insights from Iwo Land."
-        />
-        <meta property="og:title" content="Iwo Land Blogs" />
-        <meta
-          property="og:description"
-          content="Stay updated with news, events, and stories from Iwo Land."
-        />
-        <meta property="og:type" content="website" />
-      </Helmet>
+        <title>Iwo Land Blog | History of Iwo Kingdom</title>
+        <meta name="description" content="Explore the deep history of Iwo Kingdom in Osun State, Nigeria." />
+        <script type="application/ld+json">
+            {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "News of Iwo Land",
+            "author": {
+                "@type": "Person",
+                "name": "Iwo Land Editor"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Iwo Land",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https://iwo-land.vercel.app/favicon.jpg"
+                }
+            },
+            "datePublished": "2024-09-01",
+            "dateModified": "2024-09-01"
+            })}
+        </script>
+    </Helmet>
+
 
       <div>
         {/* Top Section */}
