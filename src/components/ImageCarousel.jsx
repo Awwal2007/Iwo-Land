@@ -25,7 +25,7 @@ const ImageCarousel = () => {
       className="image-carousel"
     >
       {[image2, image1, image3, image4].map((img, index) => (
-        <SwiperSlide key={index}>
+        <SwiperSlide lazy key={index}>
           <img
             loading="lazy"
             src={img}
