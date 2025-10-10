@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Route, Routes, useLocation, } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation, matchRoutes} from 'react-router-dom';
 import {Toaster} from 'sonner'
 
 import './App.css'
@@ -32,23 +32,23 @@ const AppContent = () => {
     '/admin-login',
   ];
 
-  const shouldHideFooter = hideFooterRoutes.some((route) => {
-    if (route.includes(':')) {
-      // Convert "/admin-message/:userId" to a regex like /^\/admin-message\/[^\/]+$/
-      const pattern = new RegExp('^' + route.replace(/:[^/]+/g, '[^/]+') + '$');
-      return pattern.test(location.pathname);
-    }
-    return route === location.pathname;
-  });
+  //All Routes
 
-  const shouldHideHeader = hideHeaderRoutes.some((route) => {
-    if (route.includes(':')) {
-      // Convert "/admin-message/:userId" to a regex like /^\/admin-message\/[^\/]+$/
-      const pattern = new RegExp('^' + route.replace(/:[^/]+/g, '[^/]+') + '$');
-      return pattern.test(location.pathname);
-    }
-    return route === location.pathname;
-  });
+  const routes = [
+    { path: "/" },
+    { path: "/blogs" },
+    { path: "/gallery" },
+    { path: "/singleblog/:id" },
+    { path: "/admin-login" },
+    { path: "/admin-signup" },
+    { path: "/admin" },
+  ];
+
+  const matched = matchRoutes(routes, location);
+  const isNotFoundPage = !matched; // if no route matches, it's NotFound
+
+  const shouldHideHeader = isNotFoundPage || hideHeaderRoutes.includes(location.pathname);
+  const shouldHideFooter = isNotFoundPage || hideFooterRoutes.includes(location.pathname);
     return (
       <>
         {!shouldHideHeader && <Header />}
