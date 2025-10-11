@@ -23,6 +23,7 @@ const Gallery = () => {
         <title>Gallery | Iwo Land</title>
         <link rel="robot" content="index, follow" />
         <meta name="description" content="Explore stunning photos capturing the culture, people, and heritage of Iwo Land." />
+        <meta name="keywords" content="Iwo Land, Iwo news, Iwo Land news, Oluwo, Iwo, Iwo Osun State, Osun State, History of Iwo, Odidere, Raven, Yoruba Land, Osun Oshogo, Oshogo, Telu 1" />
         <link rel="canonical" href="https://iwoland.com/gallery" />
         <meta property="og:title" content="Iwo Land Gallery" />
         <meta property="og:description" content="Discover a curated gallery of images from Iwo Land." />

@@ -36,6 +36,7 @@ const Blogs = () => {
             <meta name="robots" content="index, follow" />
             <meta name="description" content="Explore the deep history and culture of Iwo Land. Stay updated with the latest news and stories from Iwo Land, Osun State, Nigeria." />
             <link rel="canonical" href="https://iwoland.com/blogs" />
+            <meta name="keywords" content="Iwo Land, Iwo news, Iwo Land news, Oluwo, Iwo, Iwo Osun State, Osun State, History of Iwo, Odidere, Raven, Yoruba Land, Osun Oshogo, Oshogo, Telu 1" />
 
             <meta property="og:title" content="Iwo Land Blog | Yoruba History & Culture" />
             <meta property="og:description" content="Discover stories, history, and cultural heritage of Iwo Land in Osun State, Nigeria." />
