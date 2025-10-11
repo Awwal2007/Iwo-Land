@@ -53,6 +53,7 @@ const Home = () => {
         <script type="application/ld+json">
           {JSON.stringify(jsonLd)}
         </script>
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="KhQmoAaCNzLIakdahzlZyw" async></script>
       </Helmet>
 
       <div className="home-wrapper">
