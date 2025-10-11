@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
 Sitemap: https://iwoland.com/sitemap.xml
-Disallow: /admin
