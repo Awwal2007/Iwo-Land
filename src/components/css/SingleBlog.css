@@ -64,7 +64,8 @@
 .sub-image {
   width: 100%;
   height:auto ;
-    max-height: 350px !important;
+  max-height: 350px !important;
+  min-height: 350px !important;
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
