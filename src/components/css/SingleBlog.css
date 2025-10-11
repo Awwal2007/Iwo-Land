@@ -20,7 +20,8 @@
 
 .main-image {
   width: 100%;
-  height: 110vh;
+  height: auto;
+  max-height: 200vh;
   border-radius: 14px;
   object-fit: cover;
   display: block;
@@ -62,7 +63,8 @@
 
 .sub-image {
   width: 100%;
-  height: 230px;
+  height:auto ;
+    max-height: 350px !important;
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -83,7 +85,7 @@
     font-size: 1rem;
   }
   .main-image{
-    height: 60vh;    
+    height: 80vh;    
   }
 }
 
@@ -96,11 +98,11 @@
   }
   .sub-image {
     height: auto;
-    max-height: 500px;
+    max-height: 420px !important;
     object-fit: cover;
   }
   .main-image{
-    height: 40vh;    
+    height: 48vh;    
   }
 
 }

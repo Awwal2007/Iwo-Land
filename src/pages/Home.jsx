@@ -92,7 +92,7 @@ const Home = () => {
                   <div className="people-container" key={index}>
                     <SlPeople className="people-icon" color="#ab833b" size={50} />
                     <h3>{val.title}</h3>
-                    <p>{val.desc}</p>
+                    <p style={{textAlign: "center"}}>{val.desc}</p>
                   </div>
                 ))}
             </section>
@@ -115,6 +115,9 @@ const Home = () => {
             <SideBar />
           </div>
         </div>
+      </div>
+      <div>
+        <MissedArticles />
       </div>
     </>
     

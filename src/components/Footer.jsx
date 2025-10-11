@@ -6,9 +6,6 @@ const Footer = () => {
   return (
     <footer>
         <div>
-            <MissedArticles />
-        </div>
-        <div>
             <ButtonBar />
         </div>
     </footer>

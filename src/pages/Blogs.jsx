@@ -7,6 +7,7 @@ import "./css/Blogs.css";
 import EventBannerSlider from "../components/EventBannerSlider";
 import { useNews } from "../hooks/useNews";
 import { Helmet } from "react-helmet-async";
+import MissedArticles from "../components/MissedArticles";
 
 const Blogs = () => {
   const { news, loading, error } = useNews();
@@ -122,10 +123,10 @@ const Blogs = () => {
                     <article className="event-card">
                       <div className="event-image-container">
                         <img
-                          loading="lazy"
-                          src={item.mainImage}
-                          alt={truncatedHead}
-                          className="event-image"
+                            loading="lazy"
+                            src={item.mainImage}
+                            alt={truncatedHead}
+                            className="event-image"
                         />
                       </div>
                       <div className="event-content">
@@ -171,11 +172,14 @@ const Blogs = () => {
             )}
           </div>
 
-          {/* Sidebar */}
+          {/* S idebar */}
           <div className="second-side">
             <SideBar />
           </div>
         </div>
+      </div>
+      <div>
+        <MissedArticles />
       </div>
     </>
   );
