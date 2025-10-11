@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://iwo-land.vercel.app/sitemap.xml
+Sitemap: https://iwoland.com/sitemap.xml
 Disallow: /admin
