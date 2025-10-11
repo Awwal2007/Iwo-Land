@@ -143,9 +143,9 @@ const ButtonBar = () => {
               </select>
             </div>
             <div className="archives-list">
-              <a href="#" className="archive-link">Recent Articles</a>
-              <a href="#" className="archive-link">Popular Posts</a>
-              <a href="#" className="archive-link">Category Index</a>
+              <a className="archive-link">Recent Articles</a>
+              <a className="archive-link">Popular Posts</a>
+              <a className="archive-link">Category Index</a>
             </div>
           </div>
         </div>
