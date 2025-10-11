@@ -38,7 +38,7 @@ const Blogs = () => {
             {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            "headline": "News of Iwo Land",
+            "headline": "Iwo Land News",
             "author": {
                 "@type": "Person",
                 "name": "Iwo Land Editor"
@@ -48,7 +48,7 @@ const Blogs = () => {
                 "name": "Iwo Land",
                 "logo": {
                 "@type": "ImageObject",
-                "url": "https://iwo-land.vercel.app/favicon.jpg"
+                "url": "https://iwoland.com/favicon.jpg"
                 }
             },
             "datePublished": "2024-09-01",

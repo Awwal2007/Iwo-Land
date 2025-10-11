@@ -18,8 +18,8 @@ const Home = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Iwo Land",
-    "url": "https://iwo-land.vercel.app",
-    "logo": "https://iwo-land.vercel.app/favicon.jpg",
+    "url": "https://iwoland.com",
+    "logo": "https://iwoland.com/favicon.jpg",
     "sameAs": [
       "https://facebook.com/iwoland",
       "https://instagram.com/iwoland",
