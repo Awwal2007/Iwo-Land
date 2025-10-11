@@ -46,7 +46,7 @@ const Home = () => {
           content="Explore the people, culture, and beauty of Iwo Land. A proud Yoruba kingdom with deep historical roots."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://Iwo-Land.com" />
+        <meta property="og:url" content="https://iwoland.com" />
         <script type="application/ld+json">
           {JSON.stringify(jsonLd)}
         </script>
