@@ -1,4 +1,6 @@
-
+.page-title{
+  margin-bottom: 20px;
+}
 .event-card {
   display: flex; 
   flex-direction: row; 

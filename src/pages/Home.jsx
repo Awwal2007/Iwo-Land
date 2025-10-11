@@ -36,6 +36,8 @@ const Home = () => {
       <Helmet>
         <title>Home | Iwo Land</title>
         <meta name="google-site-verification" content="Z8KOXq8ILNK0QJxU6ib1jyh24h7Of2VEKZlagRE35JA" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://iwoland.com/" />
         <meta
           name="description"
           content="Discover Iwo Land — a rich Yoruba cultural center in Osun State, Nigeria. Learn about its people, heritage, and historical significance."
@@ -81,7 +83,7 @@ const Home = () => {
             <p>Iwo People are predominantly Yoruba-speaking, culturally rich, religiously diverse, and proud of their deep-rooted heritage. They are widely respected for their resilience, hospitality, and contributions to religion, education, and culture in Nigeria.</p>
             
             <h4>Explore Our Land</h4>
-            <p>Iwo is the ancestral home of the Oluwo of Iwo, one of the most revered monarchs in Yorubaland. The royal palace, a striking symbol of authority and tradition, welcomes visitors eager to witness age-old customs, ceremonies, and the enduring pride of Yoruba royalty, wo is famous for its deep-rooted Islamic heritage, vibrant Christian institutions, and enduring traditional beliefs. The skyline is dotted with majestic mosques and historic churches, including Bowen University, one of Nigeria's leading faith-based academic institutions. Pilgrims, scholars, and tourists alike are drawn to Iwo's serene atmosphere, sacred sites, and rich spiritual history.</p>
+            <p>Iwo is the ancestral home of the Oluwo of Iwo, one of the most revered monarchs in Yorubaland. The royal palace, a striking symbol of authority and tradition, welcomes visitors eager to witness age-old customs, ceremonies, and the enduring pride of Yoruba royalty. Iwo is famous for its deep-rooted Islamic heritage, vibrant Christian institutions, and enduring traditional beliefs. The skyline is dotted with majestic mosques and historic churches, including Bowen University, one of Nigeria's leading faith-based academic institutions. Pilgrims, scholars, and tourists alike are drawn to Iwo's serene atmosphere, sacred sites, and rich spiritual history.</p>
             
             <section className="values-container" aria-label="Core values of Iwo Land">
                 {[

@@ -21,7 +21,9 @@ const Gallery = () => {
 
       <Helmet>
         <title>Gallery | Iwo Land</title>
+        <link rel="robot" content="index, follow" />
         <meta name="description" content="Explore stunning photos capturing the culture, people, and heritage of Iwo Land." />
+        <link rel="canonical" href="https://iwoland.com/gallery" />
         <meta property="og:title" content="Iwo Land Gallery" />
         <meta property="og:description" content="Discover a curated gallery of images from Iwo Land." />
         <meta property="og:type" content="website" />

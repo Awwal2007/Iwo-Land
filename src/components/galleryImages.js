@@ -13,12 +13,12 @@ const galleryImages = [
   { id: 1, src: img1, alt: "Oluwo" },
   { id: 2, src: img2, alt: "Oluwo with Gov. Adeoti Unveil for Dualisation of Road in Iwo Land" },
   { id: 3, src: img3, alt: "Bowen University Iwo" },
-  { id: 4, src: img4, alt: "Iwo Market" },
-  { id: 5, src: img5, alt: "Traditional Festival" },
+  { id: 4, src: img4, alt: "Odori Market Iwo" },
+  { id: 5, src: img5, alt: "." },
   { id: 6, src: img6, alt: "Oluwo " },
   { id: 7, src: img7, alt: "Iwo People " },
   { id: 8, src: img8, alt: "Iwo Boxing Association " },
-  { id: 8, src: img9, alt: "Iwo River " },
+  { id: 8, src: img9, alt: "Odo Oba River Iwo" },
 ];
 
 export default galleryImages;

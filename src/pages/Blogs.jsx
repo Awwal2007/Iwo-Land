@@ -31,31 +31,42 @@ const Blogs = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Iwo Land Blog | History of Iwo Kingdom</title>
-        <meta name="description" content="Explore the deep history of Iwo Kingdom in Osun State, Nigeria." />
-        <script type="application/ld+json">
-            {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Iwo Land News",
-            "author": {
-                "@type": "Person",
-                "name": "Iwo Land Editor"
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "Iwo Land",
-                "logo": {
-                "@type": "ImageObject",
-                "url": "https://iwoland.com/favicon.jpg"
+        <Helmet>
+            <title>Iwo Land Blog | History & Latest News</title>
+            <meta name="robots" content="index, follow" />
+            <meta name="description" content="Explore the deep history and culture of Iwo Land. Stay updated with the latest news and stories from Iwo Land, Osun State, Nigeria." />
+            <link rel="canonical" href="https://iwoland.com/blogs" />
+
+            <meta property="og:title" content="Iwo Land Blog | Yoruba History & Culture" />
+            <meta property="og:description" content="Discover stories, history, and cultural heritage of Iwo Land in Osun State, Nigeria." />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://iwoland.com/blogs" />
+            <meta property="og:image" content="https://iwoland.com/og-image.jpg" />
+
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Iwo Land Blog | Yoruba History & Culture" />
+            <meta name="twitter:description" content="Stay informed about the traditions and people of Iwo Land." />
+            <meta name="twitter:image" content="https://iwoland.com/og-image.jpg" />
+
+            <script type="application/ld+json">
+                {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Blog",
+                "name": "Iwo Land Blog",
+                "url": "https://iwoland.com/blogs",
+                "description": "Cultural stories and news from Iwo Kingdom.",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Iwo Land",
+                    "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://iwoland.com/favicon.jpg"
+                    }
                 }
-            },
-            "datePublished": "2024-09-01",
-            "dateModified": "2024-09-01"
-            })}
-        </script>
-    </Helmet>
+                })}
+            </script>
+            </Helmet>
+
 
 
       <div>
@@ -79,6 +90,9 @@ const Blogs = () => {
         {/* Main Content */}
         <div className="home-content">
           <div className="first-side no-padding">
+            <div>
+                <h1 className="page-title">Latest News</h1>
+            </div>
             {/* Skeleton Loader */}
             {loading && (
               <div className="skeleton-news-list">
