@@ -135,10 +135,10 @@
 
 @media (max-width: 378px) {
     .news-content {
-        padding: 0px 6px !important;
+        padding: 0px 8px !important;
     }
     .news-card{
         padding: 8px 8px;
-        width: 305px !important;
+        max-width: 320px !important;
     }
 }
