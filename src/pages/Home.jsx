@@ -48,6 +48,8 @@ const Home = () => {
           property="og:description"
           content="Explore the people, culture, and beauty of Iwo Land. A proud Yoruba kingdom with deep historical roots."
         />
+        <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
+        <link rel="shortcut icon" href="/favicon.jpg" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://iwoland.com" />
         <script type="application/ld+json">
