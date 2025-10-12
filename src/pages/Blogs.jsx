@@ -92,7 +92,7 @@ const Blogs = () => {
         <div className="home-content">
           <div className="first-side no-padding">
             <div>
-                <h1 className="page-title">Latest News</h1>
+                <h1 className="page-title">News</h1>
             </div>
             {/* Skeleton Loader */}
             {loading && (

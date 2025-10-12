@@ -50,7 +50,7 @@ const EventBannerSlider = () => {
   return (
     <Slider {...settings} className="event-slider">
       {news.map((slide) => (
-        <Link to={`/singleblog/${slide._id}`} className="event-banner" key={slide._id}>
+        <div className="event-banner" key={slide._id}>
           <img
             loading="lazy"
             src={slide.mainImage}
@@ -70,7 +70,7 @@ const EventBannerSlider = () => {
               </span>
             </div>
           </div>
-        </Link>
+        </div>
       ))}
     </Slider>
   );

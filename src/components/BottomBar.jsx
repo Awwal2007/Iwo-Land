@@ -3,6 +3,7 @@ import './css/ButtonBar.css';
 import image1 from '../assets/jhdhfjsdfsd.jpg';
 import image2 from '../assets/hjsdjlkaj.jpg';
 import image3 from '../assets/iwo-market.jpg';
+import { Link } from 'react-router-dom';
 
 const images = [
   {
@@ -76,12 +77,17 @@ const ButtonBar = () => {
         {/* Newsletter Signup Section */}
         <div className="footer-section">
           <div className="section-header">
-            <h3 className="section-title">Stay Updated</h3>
+            <h3 className="section-title">Quick Links</h3>
           </div>
           <div className="newsletter-container">
-            <form className="newsletter-form">
-              <p className="newsletter-description">Subscribe to our newsletter for updates</p>
+              <div className="archives-list">
+                <Link to='/' className="archive-link">Home</Link>
+                <Link to='/blogs' className="archive-link">Blogs</Link>
+                <Link to='/gallery' className="archive-link">Gallery</Link>
+              </div>
               
+            {/* <form className="newsletter-form">
+             
               <div className="form-group">
                 <label htmlFor="firstName" className="form-label">
                   First Name <span className="required">*</span>
@@ -122,7 +128,7 @@ const ButtonBar = () => {
               </div>
               
               <button type="submit" className="submit-btn">Subscribe Now</button>
-            </form>
+            </form> */}
           </div>
         </div>
 
