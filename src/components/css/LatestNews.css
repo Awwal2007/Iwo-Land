@@ -132,3 +132,13 @@
         gap: 4px;
     }
 }
+
+@media (max-width: 378px) {
+    .news-content {
+        padding: 0px 6px !important;
+    }
+    .news-card{
+        padding: 8px 8px;
+        width: 305px !important;
+    }
+}
