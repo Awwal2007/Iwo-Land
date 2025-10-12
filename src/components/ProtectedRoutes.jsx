@@ -13,7 +13,7 @@ const ProtectedRoutes = () => {
     useEffect(()=>{
         if(!isAuth){
             toast.warning("Unauthorised. You have to be logged in")
-            // navigate("/signin")
+            navigate("/admin-login");
         }
     },[isAuth, navigate])
 

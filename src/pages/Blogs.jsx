@@ -66,7 +66,7 @@ const Blogs = () => {
                 }
                 })}
             </script>
-            </Helmet>
+        </Helmet>
 
 
 

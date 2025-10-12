@@ -139,16 +139,32 @@ const AuthProvider = ({ children }) => {
             setVerifyingAccount(false)
         }
     }
+
+
+    const isTokenExpired = (token) => {
+        try {
+            const payload = JSON.parse(atob(token.split('.')[1]));
+            const expirationTime = payload.exp * 1000;
+            return Date.now() > expirationTime;
+        } catch (error) {
+            console.error("Error checking token expiration:", error);
+            return true; // Consider invalid tokens as expired
+        }
+    };
+
     const isAuthenticated = () => {
-        // check if user is authenticated by checking if there's an accessToken in the localStorage
-        const accessToken = localStorage.getItem("accessToken") || localStorage.getItem("sellerToken");
-        // if there's an accessToken, return true
-        if (accessToken) {
-            return true;
-        } else {
-            // if there's no accessToken in the localStorage, return false
+        const accessToken = localStorage.getItem("accessToken");
+        
+        if (!accessToken) {
             return false;
         }
+        
+        if (isTokenExpired(accessToken)) {
+            localStorage.removeItem("accessToken");
+            return false;
+        }
+        
+        return true;
     };
 
     const logout = () => {

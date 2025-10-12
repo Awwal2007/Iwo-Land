@@ -24,12 +24,12 @@ const AppContent = () => {
   const location = useLocation();
   const hideHeaderRoutes = [
     '/admin',
-    '/admin-signup',
+    // '/admin-signup',
     '/admin-login',
   ];
   const hideFooterRoutes = [
     '/admin',
-    '/admin-signup',
+    // '/admin-signup',
     '/admin-login',
   ];
 
@@ -41,7 +41,7 @@ const AppContent = () => {
     { path: "/gallery" },
     { path: "/singleblog/:id" },
     { path: "/admin-login" },
-    { path: "/admin-signup" },
+    // { path: "/admin-signup" },
     { path: "/admin" },
   ];
 
@@ -65,7 +65,7 @@ const AppContent = () => {
             <Route path='/gallery' element={<Gallery />} />
             <Route path='/singleblog/:id' element={<SingleBlog />} />
             <Route path='/admin-login' element={<AdminLogin />} />
-            <Route path='/admin-signup' element={<AdminSignup />} />
+            {/* <Route path='/admin-signup' element={<AdminSignup />} /> */}
             
             <Route element={<ProtectedRoutes />}>
               <Route path='/admin' element={<Admin />} />
