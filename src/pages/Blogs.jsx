@@ -42,14 +42,14 @@ const Blogs = () => {
             <meta property="og:description" content="Discover stories, history, and cultural heritage of Iwo Land in Osun State, Nigeria." />
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://iwoland.com/blogs" />
-            <meta property="og:image" content="https://iwoland.com/favicon.jpg" />
-            <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
-            <link rel="shortcut icon" href="/favicon.jpg" />
+            <meta property="og:image" content="https://iwoland.com/favicon.png" />
+            <link rel="icon" type="image/png" href="/favicon.png" />
+            <link rel="shortcut icon" href="/favicon.png" />
 
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content="Iwo Land Blog | Yoruba History & Culture" />
             <meta name="twitter:description" content="Stay informed about the traditions and people of Iwo Land." />
-            <meta name="twitter:image" content="https://iwoland.com/favicon.jpg" />
+            <meta name="twitter:image" content="https://iwoland.com/favicon.png" />
 
             <script type="application/ld+json">
                 {JSON.stringify({
@@ -63,7 +63,7 @@ const Blogs = () => {
                     "name": "Iwo Land",
                     "logo": {
                     "@type": "ImageObject",
-                    "url": "https://iwoland.com/favicon.jpg"
+                    "url": "https://iwoland.com/favicon.png"
                     }
                 }
                 })}

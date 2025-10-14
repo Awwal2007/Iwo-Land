@@ -28,8 +28,8 @@ const Gallery = () => {
         <meta property="og:title" content="Iwo Land Gallery" />
         <meta property="og:description" content="Discover a curated gallery of images from Iwo Land." />
         <meta property="og:type" content="website" />
-        <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
-        <link rel="shortcut icon" href="/favicon.jpg" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="shortcut icon" href="/favicon.png" />
       </Helmet>
 
       <div className="home-content">

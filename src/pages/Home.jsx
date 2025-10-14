@@ -19,7 +19,7 @@ const Home = () => {
     "@type": "Organization",
     "name": "Iwo Land",
     "url": "https://iwoland.com",
-    "logo": "https://iwoland.com/favicon.jpg",
+    "logo": "https://iwoland.com/favicon.png",
     "sameAs": [
       "https://facebook.com/iwoland",
       "https://instagram.com/iwoland",
@@ -48,8 +48,8 @@ const Home = () => {
           property="og:description"
           content="Explore the people, culture, and beauty of Iwo Land. A proud Yoruba kingdom with deep historical roots."
         />
-        <link rel="icon" type="image/jpeg" href="/favicon.jpg" />
-        <link rel="shortcut icon" href="/favicon.jpg" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="shortcut icon" href="/favicon.png" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://iwoland.com" />
         <script type="application/ld+json">

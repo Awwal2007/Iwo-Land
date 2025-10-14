@@ -34,7 +34,7 @@ const SingleBlog = () => {
         "name": "Iwo Land",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://iwoland.com/favicon.jpg",
+          "url": "https://iwoland.com/favicon.png",
         },
       },
       "datePublished": date,
