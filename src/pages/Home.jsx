@@ -34,14 +34,14 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Home | Iwo Land - Officila Website</title>
+        <title>Iwo Land - Officila Website</title>
         <meta name="google-site-verification" content="Z8KOXq8ILNK0QJxU6ib1jyh24h7Of2VEKZlagRE35JA" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://iwoland.com/" />
-        <meta name="keywords" content="Iwo Land, Iwo news, Iwo Land news, Oluwo, Iwo, Iwo Osun State, Osun State, History of Iwo, Odidere, Raven, Yoruba Land, Osun Oshogo, Oshogo, Telu 1" />
+        <meta name="keywords" content="Iwo Land, Iwo news, Iwo Land news, Oluwo, Iwo, iwoland, Iwo Osun State, Osun State, History of Iwo, Odidere, Raven, Yoruba Land, Osun Oshogo, Oshogo, Telu 1" />
         <meta
           name="description"
-          content="Discover Iwo Land — a rich Yoruba cultural place in Osun State, Nigeria. Learn about its people, heritage, and historical significance."
+          content="Discover Iwo Land — a rich Yoruba cultural land in Osun State, Nigeria. Learn about its people, heritage, and historical significance."
         />
         <meta property="og:title" content="Iwo Land - Yoruba Heritage and Culture" />
         <meta
