@@ -37,7 +37,7 @@ const Home = () => {
         <title>Iwo Land - Officila Website</title>
         <meta name="google-site-verification" content="Z8KOXq8ILNK0QJxU6ib1jyh24h7Of2VEKZlagRE35JA" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://iwoland.com/" />
+        <link rel="canonical" href="https://iwoland.com" />
         <meta name="keywords" content="Iwo Land, Iwo news, Iwo Land news, Oluwo, Iwo, iwoland, Iwo Osun State, Osun State, History of Iwo, Odidere, Raven, Yoruba Land, Osun Oshogo, Oshogo, Telu 1" />
         <meta
           name="description"
