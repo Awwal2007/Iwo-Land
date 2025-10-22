@@ -25,7 +25,6 @@ const EventBannerSlider = () => {
     return (
       <div className="skeleton-banner-wrapper">
         {[...Array(1)]
-        .sort(0,3)
         .map((_, index) => (
           <div key={index} className="skeleton-banner">
             <div className="skeleton-banner-image" />
@@ -51,7 +50,9 @@ const EventBannerSlider = () => {
   // ✅ Actual slider
   return (
     <Slider {...settings} className="event-slider">
-      {news.map((slide) => (
+      {news      
+      .slice(0,6)
+      .map((slide) => (
         <div className="event-banner" key={slide._id}>
           <img
             loading="lazy"

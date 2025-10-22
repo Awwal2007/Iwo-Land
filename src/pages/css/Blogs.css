@@ -106,7 +106,9 @@
   transform: scale(1.03); /* slight zoom effect */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* soft shadow */
 }
-
+.event-card{
+  width: 100%;
+}
 
 @media (max-width: 768px) {
   .event-card {
