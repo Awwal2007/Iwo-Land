@@ -108,7 +108,7 @@
 }
 
 
-@media (maxf-width: 768px) {
+@media (max-width: 768px) {
   .event-card {
     flex-direction: column;
     height: fit-content;
