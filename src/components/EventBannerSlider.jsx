@@ -24,7 +24,9 @@ const EventBannerSlider = () => {
   if (loading) {
     return (
       <div className="skeleton-banner-wrapper">
-        {[...Array(1)].map((_, index) => (
+        {[...Array(1)]
+        .sort(0,3)
+        .map((_, index) => (
           <div key={index} className="skeleton-banner">
             <div className="skeleton-banner-image" />
             <div className="skeleton-banner-content">

@@ -108,14 +108,15 @@
 }
 
 
-@media (max-width: 768px) {
+@media (maxf-width: 768px) {
   .event-card {
     flex-direction: column;
     height: fit-content;
   }
 
   .second-side{
-    display: none;
+    display: block;
+    margin-top: 20px;
   }
 
   .latest-section{
