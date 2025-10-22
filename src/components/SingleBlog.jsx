@@ -118,9 +118,6 @@ const SingleBlog = () => {
           {
             singleNews.image3 && <img loading="lazy" src={singleNews.image3} alt={title} className="sub-image" />
           }
-          
-          <img loading="lazy" src={singleNews.image2} alt={title} className="sub-image" />
-          <img loading="lazy" src={singleNews.image3} alt={title} className="sub-image" />
         </div>
       </article>
     </>
