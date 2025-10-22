@@ -109,7 +109,16 @@ const SingleBlog = () => {
         </p>
         <p itemProp="articleBody" className="description">{description}</p>
         <div className="sub-image-container">
-          <img loading="lazy" src={singleNews.image1} alt={title} className="sub-image" />
+          {
+            singleNews.image1 && <img loading="lazy" src={singleNews.image1} alt={title} className="sub-image" />
+          }
+          {
+            singleNews.image2 && <img loading="lazy" src={singleNews.image2} alt={title} className="sub-image" />
+          }
+          {
+            singleNews.image3 && <img loading="lazy" src={singleNews.image3} alt={title} className="sub-image" />
+          }
+          
           <img loading="lazy" src={singleNews.image2} alt={title} className="sub-image" />
           <img loading="lazy" src={singleNews.image3} alt={title} className="sub-image" />
         </div>
