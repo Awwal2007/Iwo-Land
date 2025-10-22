@@ -27,7 +27,7 @@
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(16,24,40,0.06);
   padding: 10px;
-  /* overflow: hidden;   */
+  overflow: hidden;  
   width: 100%;
   max-height: 800px;
 }
