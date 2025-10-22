@@ -10,6 +10,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
 import { TiHome } from "react-icons/ti";
 import { FaSearch } from "react-icons/fa";
+import TypingEffect from './TypeAnimation';
 
 const Header = () => {
     const detailsRef = useRef(null);
@@ -33,7 +34,8 @@ const Header = () => {
             </div>
             <div style={{background: `url(${backgroundImage})`, objectFit: "unset", backgroundSize: "cover", backgroundRepeat: "no-repeat" }} className='kingdom-name' >
                 <h2 style={{marginBottom: "10px", fontSize: "35px"}}>Iwo Land</h2>
-                <p>"The child who listens to prospers"</p>
+                {/* <p>"The child who listens to prospers"</p> */}
+                <TypingEffect />
             </div>
             <div className='nav-bar'>
                 <div className='desktop-nav'>
