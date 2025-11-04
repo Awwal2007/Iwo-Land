@@ -34,7 +34,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Iwo Land - Officila Website</title>
+        <title>Iwo Land - Official Website</title>
         <meta name="google-site-verification" content="Z8KOXq8ILNK0QJxU6ib1jyh24h7Of2VEKZlagRE35JA" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://iwoland.com" />

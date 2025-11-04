@@ -42,10 +42,11 @@
 .post-card{
   display: flex;
   align-items: center;
+  max-width: 360px;
 }
 
 .fb-post{
-  max-width: 70% !important;
+  /* max-width: 70% !important; */
 }
 
 /* Pagination */
@@ -73,4 +74,12 @@
 
 .page-indicator {
   font-weight: 600;
+}
+@media (max-width: 412px) {
+  .post-card{
+    min-height: fit-content!important;
+  }
+  .fb-post iframe{
+    width: 40px;
+  }
 }
