@@ -139,7 +139,7 @@ const ButtonBar = () => {
           </div>
           <div className="archives-container">
             <p className="archives-description">Browse past content</p>
-            <div className="archives-select">
+            {/* <div className="archives-select">
               <select className="month-select">
                 <option value="">Select Month</option>
                 <option value="2025-06">June 2025</option>
@@ -147,7 +147,7 @@ const ButtonBar = () => {
                 <option value="2025-04">April 2025</option>
                 <option value="2025-03">March 2025</option>
               </select>
-            </div>
+            </div> */}
             <div className="archives-list">
               <a className="archive-link">Recent Articles</a>
               <a className="archive-link">Popular Posts</a>
