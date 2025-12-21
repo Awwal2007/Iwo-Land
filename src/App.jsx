@@ -19,8 +19,10 @@ import ProtectedRoutes from './components/ProtectedRoutes.jsx';
 import NotFound from './components/NotFound.jsx';
 import ScrollToTop from './components/ScrollToTop.jsx';
 import MissedArticles from './components/MissedArticles.jsx';
+import useAnalytics from './useAnalytics.js';
 
 const AppContent = () => {
+  useAnalytics()
   const location = useLocation();
   const hideHeaderRoutes = [
     '/admin',
