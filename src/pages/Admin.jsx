@@ -356,7 +356,9 @@ const Admin = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {events.map((ev) => (
+                    {events
+                    .slice(0,16)
+                    .map((ev) => (
                       <tr key={ev._id}>
                         <td>
                             <img loading='lazy' src={ev.mainImage} alt={ev.title} className="thumb" />
@@ -404,7 +406,7 @@ const Admin = () => {
 
       {activeTab === 'facebook' && (
         <section className="facebook-section">
-          <h2>Manage Facebook Posts</h2>
+          <h2>Add New Facebook Posts</h2>
           
           <form onSubmit={addFacebookPost} className="facebook-form">
             <div className="form-group">
@@ -420,12 +422,15 @@ const Admin = () => {
             </div>
             <button type="submit" className="submit-btn">Add Facebook Post</button>
           </form>
-          
+          <br />
+          <h2>Manage Facebook Posts</h2>
           <div className="facebook-posts-grid">
             {facebookPosts.length === 0 ? (
               <div className="no-data">No Facebook posts added yet.</div>
             ) : (
-              facebookPosts.map((post) => (
+              facebookPosts
+              .slice(0,6)
+              .map((post) => (
                 <div key={post._id} className="facebook-post-card">
                   <div className="fb-post-container">
                     <div
@@ -445,7 +450,7 @@ const Admin = () => {
 
       {activeTab === 'gallery' && (
         <section className="facebook-section">
-          <h2>Manage Gallery Images</h2>
+          <h2>Add New Gallery Images</h2>
           
           <form onSubmit={addGalleryImage} className="facebook-form">
             <div className="form-group">
@@ -476,12 +481,15 @@ const Admin = () => {
             }
             <button disabled={galleryLoading} type="submit" className="submit-btn">{galleryLoading ? "Adding...." : "Add Gallery Image"}</button>
           </form>
-          
+          <br />
+          <h2>Manage Gallery Images</h2>
           <div className="facebook-posts-grid">
             {galleryImages.length === 0 ? (
               <div className="no-data">No Gallery image added yet.</div>
             ) : (
-              galleryImages.map((post) => (
+              galleryImages
+              .slice(0,6)
+              .map((post) => (
                 <div key={post._id} className="facebook-post-card">
                   <div className="fb-post-container">
                     <div>{post.title}</div>
