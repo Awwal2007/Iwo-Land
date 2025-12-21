@@ -36,56 +36,6 @@ const SideBar = () => {
   return (
     <div style={{width: "100%",gap: "30px", display: "flex", flexDirection: "column"}}>
         <div>
-            <form onSubmit={handleSubmit} id="demo">
-                <FormControl>
-                    <Input
-                    sx={{ '--Input-decoratorChildHeight': '45px' }}
-                    placeholder="search"
-                    type="search"
-                    required
-                    value={data.email}
-                    onChange={(event) =>
-                        setData({ email: event.target.value, status: 'initial' })
-                    }
-                    error={data.status === 'failure'}
-                    endDecorator={
-                        <Button
-                        variant="solid"
-                        color="primary"
-                        loading={data.status === 'loading'}
-                        type="submit"
-                        sx={{ borderTopLeftRadius: 0, borderBottomLeftRadius: 0 }}
-                        >
-                        Search
-                        </Button>
-                    }
-                    />
-                    {data.status === 'failure' && (
-                    <FormHelperText
-                        sx={(theme) => ({ color: theme.vars.palette.danger[400] })}
-                    >
-                        Oops! something went wrong, please try again later.
-                    </FormHelperText>
-                    )}
-                    {data.status === 'sent' && (
-                    <FormHelperText
-                        sx={(theme) => ({ color: theme.vars.palette.primary[400] })}
-                    >
-                        You are all set!
-                    </FormHelperText>
-                    )}
-                </FormControl>
-            </form>
-        </div>
-        <div>
-            <p>Upcoming Events</p>
-        </div>
-        <div style={{display: "flex", alignItems: "center"}}>
-            <div style={{justifyContent: "center"}}><SlCalender size={25}/></div>
-            <div><span style={{marginLeft: "10px", fontSize: "12px"}}>There are no upcoming events</span></div>
-            
-        </div>
-        <div>
             {/* <FacebookWidget /> */}
             <FacebookPosts />
         </div>
