@@ -361,7 +361,7 @@ const Admin = () => {
                     .map((ev) => (
                       <tr key={ev._id}>
                         <td>
-                            <img loading='lazy' src={ev.mainImage} alt={ev.title} className="thumb" />
+                          <img loading='lazy' src={ev.mainImage} alt={ev.title} className="thumb" />
                         </td>
                         <td>
                           {expandedRows[ev._id]?.title ? ev.title : truncate(ev.title, 20)}
