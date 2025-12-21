@@ -55,7 +55,7 @@ const AppContent = () => {
         {!shouldHideHeader && <Header />}
 
       <AuthProvider>
-         <NewsProvider>
+        <NewsProvider>
          {/* <Header /> */}
           <Routes>
             <Route path='/' element={<Home />} />
