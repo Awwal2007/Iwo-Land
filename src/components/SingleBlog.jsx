@@ -164,7 +164,7 @@ const SingleBlog = () => {
         <article
           itemScope
           itemType="https://schema.org/NewsArticle"
-          className="single-blog-container"
+          className="single-blog-container first-side"
         >
           <h1 itemProp="headline" className="sub-head">
             {title}
@@ -214,6 +214,7 @@ const SingleBlog = () => {
             )}
           </div>
         </article>
+        
         <div className="second-side">
           <SideBar />
         </div>

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import galleryImages from '../components/galleryImages';
+import React, { useEffect, useState } from 'react';
+// import galleryImages from '../components/galleryImages';
 import './css/Gallery.css';
 import SideBar from '../components/SideBar';
 import { Helmet } from 'react-helmet-async';
@@ -7,6 +7,14 @@ import MissedArticles from '../components/MissedArticles';
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [galleryImages, setGalleryImages] = useState([]);
+  const [galleryLoading, setGalleryLoading] = useState(false)
+
+  const ITEMS_PER_PAGE = 6;
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+
 
   const handleImageClick = (img) => {
     setSelectedImage(img);
@@ -15,6 +23,45 @@ const Gallery = () => {
   const closeModal = () => {
     setSelectedImage(null);
   };
+
+  const baseUrl = import.meta.env.VITE_BASE_URL
+
+  const fetchGalleryImages = async()=>{
+    try {
+      setGalleryLoading(true)
+
+      const res = await fetch(`${baseUrl}/gallery`)
+      if(!res.ok) throw new Error("failed to fetch gallery images")
+      
+      const data = await res.json()
+
+      if(data.status === "success"){
+        setGalleryImages(data.gallery)
+      }
+
+    } catch (error) {
+      console.log(error);      
+    }finally{
+      setGalleryLoading(false)
+    }
+  }
+
+  useEffect(()=>{
+    fetchGalleryImages()
+  }, [])
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentPage]);
+
+
+  const totalPages = Math.ceil(galleryImages.length / ITEMS_PER_PAGE);
+
+  const paginatedImages = galleryImages.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
+
 
   return (
     <>
@@ -33,29 +80,56 @@ const Gallery = () => {
       </Helmet>
 
       <div className="home-content">
-        <div className="first-side">
+        <div>
           <div className="gallery-container">
-            <h1 className="gallery-title">📷 Iwo Land Gallery</h1>
+            <h1 className="gallery-title">Iwo Land Gallery</h1>
             <div className="gallery-grid">
-              {galleryImages
-              .slice(0, 10)
-              .map((img) => (
-                <div
-                  role='button'
-                  tabIndex="0"
-                  key={img.id}
-                  className="gallery-item"
-                  onClick={() => handleImageClick(img)}
-                >
-                  <img
-                    loading="lazy"
-                    src={img.src}
-                    alt={img.alt}
-                    className="gallery-image"
-                  />
-                </div>
+              {galleryLoading
+                ? Array.from({ length: ITEMS_PER_PAGE }).map((_, index) => (
+                    <div key={index} className="gallery-item skeleton">
+                      <div className="skeleton-image"></div>
+                    </div>
+                  ))
+                : paginatedImages.map((img) => (
+                    <div
+                      role="button"
+                      tabIndex="0"
+                      key={img._id}
+                      className="gallery-item"
+                      onClick={() => handleImageClick(img)}
+                    >
+                      <img
+                        loading="lazy"
+                        src={img.gallery}
+                        alt={img.title}
+                        className="gallery-image"
+                      />
+                    </div>
               ))}
+
             </div>
+
+            {!galleryLoading && totalPages > 1 && (
+              <div className="pagination">
+                <button
+                  disabled={currentPage === 1}
+                  onClick={() => setCurrentPage((p) => p - 1)}
+                >
+                  Prev
+                </button>
+
+                <span>
+                  Page {currentPage} of {totalPages}
+                </span>
+
+                <button
+                  disabled={currentPage === totalPages}
+                  onClick={() => setCurrentPage((p) => p + 1)}
+                >
+                  Next
+                </button>
+              </div>
+            )}
           </div>
         </div>
 
@@ -70,11 +144,11 @@ const Gallery = () => {
               &times;
             </span>
             <img
-              src={selectedImage.src}
-              alt={selectedImage.alt}
+              src={selectedImage.gallery}
+              alt={selectedImage.title}
               className="modal-image"
             />
-            <p className="modal-caption">{selectedImage.alt}</p>
+            <p className="modal-caption">{selectedImage.title}</p>
           </div>
         )}
       </div>

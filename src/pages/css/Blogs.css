@@ -205,7 +205,7 @@
 }
 
 .page-btn:hover:not(:disabled) {
-  background-color: #01398c;
+  background-color: var(--main-color);
   transform: scale(1.05);
 }
 

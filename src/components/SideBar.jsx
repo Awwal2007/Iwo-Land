@@ -12,25 +12,6 @@ import useMediaQuery from './MediaQuery';
 import FacebookPosts from './FacebookPosts';
 
 const SideBar = () => {
-    const [data, setData] = React.useState({
-    email: '',
-    status: 'initial',
-  });
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setData((current) => ({ ...current, status: 'loading' }));
-    try {
-      // Replace timeout with real backend operation
-      setTimeout(() => {
-        setData({ email: '', status: 'sent' });
-      }, 1500);
-    } catch (error) {
-      setData((current) => ({ ...current, status: 'failure' }));
-      console.log(error);
-      
-    }
-  };
   const isMobile = useMediaQuery('(maxWidth: 175px)')
   if(isMobile) return null
   return (
