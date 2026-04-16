@@ -68,7 +68,7 @@
   padding: 25px var(--pad);
   background-color: white;
   font-family: var(--head-font);
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 
 .home-content {
