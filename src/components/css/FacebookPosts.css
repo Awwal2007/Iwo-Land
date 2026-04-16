@@ -76,10 +76,9 @@ g.fb-post{
   font-weight: 600;
 }
 @media (max-width: 412px) {
-  .post-card{
-    min-height: fit-content!important;
+  .post-card {
+    min-height: fit-content !important;
+    max-width: 100%;
   }
-  .fb-post iframe{
-    width: 40px;
-  }
+  /* Remove the tiny width that was hiding the iframe */
 }

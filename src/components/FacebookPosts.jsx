@@ -30,10 +30,23 @@ const FacebookPosts = () => {
   useEffect(() => {
     // Ensure Facebook SDK is loaded once
     if (!window.FB) {
+        // Create fb-root div if it doesn't exist
+        if (!document.getElementById("fb-root")) {
+            const fbRoot = document.createElement("div");
+            fbRoot.id = "fb-root";
+            document.body.appendChild(fbRoot);
+        }
+
         const script = document.createElement("script");
         script.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0";
         script.async = true;
         script.defer = true;
+        script.crossOrigin = "anonymous";
+        script.onload = () => {
+            if (window.FB) {
+                window.FB.XFBML.parse();
+            }
+        };
         document.body.appendChild(script);
     } else {
         window.FB.XFBML.parse();
@@ -42,7 +55,10 @@ const FacebookPosts = () => {
 
 
     useEffect(() => {
-      if (window.FB) window.FB.XFBML.parse();
+      // Re-parse XFBML whenever the posts are updated
+      if (window.FB) {
+          window.FB.XFBML.parse(document.querySelector('.facebook-posts-container'));
+      }
     }, [currentPosts]);
 
 

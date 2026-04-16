@@ -152,26 +152,39 @@ const ButtonBar = () => {
           </div>
           <div className="archives-list">
             <Link to="/" className="archive-link">Home</Link>
-            <Link to="/blogs" className="archive-link">Blogs</Link>
+            <Link to="/about-iwoland" className="archive-link">About Iwoland</Link>
+            <Link to="/leadership" className="archive-link">Leadership</Link>
+            <Link to="/blogs" className="archive-link">News & Updates</Link>
             <Link to="/gallery" className="archive-link">Gallery</Link>
           </div>
         </div>
 
-        {/* ---------------- ARCHIVES ---------------- */}
+        {/* ---------------- OFFICIAL CONTACT ---------------- */}
         <div className="footer-section">
           <div className="section-header">
-            <h3 className="section-title">Archives</h3>
+            <h3 className="section-title">Official Contact</h3>
           </div>
           <div className="archives-list">
-            <a className="archive-link">Recent Articles</a>
-            <a className="archive-link">Popular Posts</a>
-            <a className="archive-link">Category Index</a>
+            <p className="archive-link">
+              <strong>Address:</strong> Oluwo Palace, Iwo, Osun State, Nigeria.
+            </p>
+            <p className="archive-link">
+              <strong>Email:</strong> info@iwoland.com
+            </p>
+            <div style={{ marginTop: '10px', display: 'flex', gap: '15px' }}>
+               <a href="https://facebook.com/iwoland" target="_blank" rel="noopener noreferrer" className="archive-link">Facebook</a>
+               <a href="https://twitter.com/iwoland" target="_blank" rel="noopener noreferrer" className="archive-link">Twitter</a>
+               <a href="https://instagram.com/iwoland" target="_blank" rel="noopener noreferrer" className="archive-link">Instagram</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Iwo Land. All rights reserved.</p>
+      <div className="footer-bottom" style={{ borderTop: '1px solid #ddd', paddingTop: '20px' }}>
+        <p style={{ fontWeight: 'bold', color: '#ab833b', marginBottom: '10px' }}>
+          This is the Official Website of Iwoland & the Royal Institution.
+        </p>
+        <p>&copy; {new Date().getFullYear()} Iwoland Official. All rights reserved.</p>
       </div>
     </footer>
   );

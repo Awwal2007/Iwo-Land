@@ -10,6 +10,7 @@ import IwoLand from './pages/IwoLand.jsx';
 import Blogs from './pages/Blogs.jsx';
 import SingleBlog from './components/SingleBlog.jsx';
 import Gallery from './pages/Gallery.jsx';
+import Leadership from './pages/Leadership.jsx';
 import Admin from './pages/Admin.jsx';
 import { NewsProvider } from './contexts/NewsProvider.jsx';
 import AdminSignup from './pages/AdminSignup.jsx';
@@ -40,6 +41,8 @@ const AppContent = () => {
   const routes = [
     { path: "/" },
     { path: "/blogs" },
+    { path: "/about-iwoland" },
+    { path: "/leadership" },
     { path: "/gallery" },
     { path: "/singleblog/:id" },
     { path: "/admin-login" },
@@ -63,6 +66,8 @@ const AppContent = () => {
             <Route path='/' element={<Home />} />
             <Route path='*' element={<NotFound />} />
             {/* <Route path='/iwo-land' element={<IwoLand />} /> */}
+            <Route path='/about-iwoland' element={<IwoLand />} />
+            <Route path='/leadership' element={<Leadership />} />
             <Route path='/blogs' element={<Blogs />} />
             <Route path='/gallery' element={<Gallery />} />
             <Route path='/singleblog/:id' element={<SingleBlog />} />

@@ -12,10 +12,10 @@ async function generateSitemap() {
     // 🧩 Static routes
     const staticLinks = [
       { url: "/", changefreq: "daily", priority: 1.0 },
-      { url: "/blogs", changefreq: "monthly", priority: 0.9 },
-      { url: "/gallery", changefreq: "monthly", priority: 0.8 },
-    //   { url: "/about", changefreq: "monthly", priority: 0.7 },
-    //   { url: "/contact", changefreq: "monthly", priority: 0.7 },
+      { url: "/about-iwoland", changefreq: "monthly", priority: 0.9 },
+      { url: "/leadership", changefreq: "monthly", priority: 0.9 },
+      { url: "/blogs", changefreq: "monthly", priority: 0.8 },
+      { url: "/gallery", changefreq: "monthly", priority: 0.7 },
     ];
 
     staticLinks.forEach((link) => sitemap.write(link));

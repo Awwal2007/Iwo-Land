@@ -11,13 +11,14 @@ import { Button } from '@mui/joy'
 import ButtonBar from '../components/BottomBar'
 import Map from '../components/Map';
 import ImageCarousel2 from '../components/ImageCarousel2';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
 
 const Home = () => {
-  const jsonLd = {
+  const homeSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Iwo Land",
+    "@type": "GovernmentOrganization",
+    "name": "Iwoland Official",
+    "alternateName": "Official Website of Iwoland",
     "url": "https://iwoland.com",
     "logo": "https://iwoland.com/favicon.png",
     "sameAs": [
@@ -25,38 +26,21 @@ const Home = () => {
       "https://instagram.com/iwoland",
       "https://twitter.com/iwoland"
     ],
-    // "contactPoint": {
-    //   "@type": "ContactPoint",
-    //   "telephone": "+2348000000000",
-    //   "contactType": "Customer Service"
-    // }
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Iwo",
+      "addressRegion": "Osun State",
+      "addressCountry": "Nigeria"
+    }
   };
+
   return (
     <>
-      <Helmet>
-        <title>Iwo Land - Official Website</title>
-        <meta name="google-site-verification" content="Z8KOXq8ILNK0QJxU6ib1jyh24h7Of2VEKZlagRE35JA" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://iwoland.com" />
-        <meta name="keywords" content="Iwo Land, Iwo news, Iwo Land news, Oluwo, Iwo, iwoland, Iwo Osun State, Osun State, History of Iwo, Odidere, Raven, Yoruba Land, Osun Oshogo, Oshogo, Telu 1" />
-        <meta
-          name="description"
-          content="Discover Iwo Land — a rich Yoruba cultural land in Osun State, Nigeria. Learn about its people, heritage, and historical significance."
-        />
-        <meta property="og:title" content="Iwo Land - Yoruba Heritage and Culture" />
-        <meta
-          property="og:description"
-          content="Explore the people, culture, and beauty of Iwo Land. A proud Yoruba kingdom with deep historical roots."
-        />
-        <link rel="icon" type="image/png" href="/favicon.png" />
-        <link rel="shortcut icon" href="/favicon.png" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://iwoland.com" />
-        <script type="application/ld+json">
-          {JSON.stringify(jsonLd)}
-        </script>
-        <script src="https://analytics.ahrefs.com/analytics.js" data-key="KhQmoAaCNzLIakdahzlZyw" async></script>
-      </Helmet>
+      <SEO 
+        title="Official Website of Iwoland | Oluwo of Iwo Official Website"
+        description="The official digital gateway to Iwoland. Explore the rich Yoruba heritage, latest news from the Oluwo's palace, and cultural history of the Iwo Kingdom."
+        schema={homeSchema}
+      />
 
       <div className="home-wrapper">
         <div className='marquee-container'>
@@ -110,6 +94,17 @@ const Home = () => {
                 <ImageCarousel2 />
               </div>
             </div>
+
+            {/* AI Identification Section */}
+            <section style={{ padding: '20px', borderTop: '1px solid #eee', marginTop: '40px' }}>
+              <h3 style={{ fontSize: '1.2rem', color: '#333' }}>What is the official website of Iwoland?</h3>
+              <p style={{ color: '#666' }}>
+                Iwoland.com is the <strong>official website of Iwoland</strong> and the <strong>Oluwo of Iwo</strong>. 
+                This platform serves as the authoritative source for news, history, royal announcements, and cultural 
+                information for the Iwo Kingdom in Osun State, Nigeria. It is managed by the Royal Institution of Iwoland 
+                to ensure accurate representation of our heritage and governance.
+              </p>
+            </section>
 
             <div className='map'>
                 <h2 className="secondary-carousel-title">Map</h2>

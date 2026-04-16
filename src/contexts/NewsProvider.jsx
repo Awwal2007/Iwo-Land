@@ -17,16 +17,12 @@ export const NewsProvider = ({ children }) => {
 
   const baseUrl = import.meta.env.VITE_BASE_URL;
 
-  const fetchNews = async () => {
+  const fetchNews = React.useCallback(async () => {
     try {
       setLoading(true);
       setError(null);
 
-
-      // Example: Replace with your own API endpoint or key
-      const response = await fetch(
-        `${baseUrl}/news`
-      );
+      const response = await fetch(`${baseUrl}/news`);
 
       if (!response.ok) throw new Error('Failed to fetch news');
 
@@ -37,9 +33,9 @@ export const NewsProvider = ({ children }) => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [baseUrl]);
 
-  const createNews = async (newArticle) => {
+  const createNews = React.useCallback(async (newArticle) => {
     try {
       setCreating(true);
       setError(null);
@@ -57,16 +53,15 @@ export const NewsProvider = ({ children }) => {
       if(created.status === "success"){
         toast.success(created.message);
       }
-      // Update state immediately (optimistic UI)
       setNews((prev) => [created, ...prev]);
     } catch (err) {
       setError(err.message); 
-    }finally{
+    } finally {
       setCreating(false);
     }
-  };
+  }, [baseUrl, token]);
 
-  const deleteNews = async (id) => {
+  const deleteNews = React.useCallback(async (id) => {
     try {
       setError(null);
 
@@ -84,14 +79,13 @@ export const NewsProvider = ({ children }) => {
         toast.success(data.message);
       }
 
-      // Optimistically remove from state
       setNews((prev) => prev.filter(item => item._id !== id));
     } catch (err) {
       setError(err.message);
     }
-  };
+  }, [baseUrl, token]);
 
-  const getNewsById = async (id) => {
+  const getNewsById = React.useCallback(async (id) => {
     try {
       setSingleNewsLoading(true);
       const res = await fetch(`${baseUrl}/news/${id}`);
@@ -102,14 +96,14 @@ export const NewsProvider = ({ children }) => {
       }
     } catch (error) {
       console.error('Error fetching single news:', error);
-    }finally{
+    } finally {
       setSingleNewsLoading(false)
     }
-  };
+  }, [baseUrl]);
 
   //Facebook Link
 
-  const createFacebookLink = async (data) => {
+  const createFacebookLink = React.useCallback(async (data) => {
     try {
       setError(null);
 
@@ -125,24 +119,19 @@ export const NewsProvider = ({ children }) => {
 
       if (created.status === "success") {
         toast.success(created.message);
-        // Immediately add new link to state
         setFacebookPosts((prev) => [created.facebook, ...prev]);
       }
     } catch (err) {
       setError(err.message);
     }
-  };
+  }, [baseUrl]);
 
 
-  const fetchFacebookLink = async () => {
+  const fetchFacebookLink = React.useCallback(async () => {
     try {
       setError(null);
 
-
-      // Example: Replace with your own API endpoint or key
-      const response = await fetch(
-        `${baseUrl}/facebook`
-      );
+      const response = await fetch(`${baseUrl}/facebook`);
 
       if (!response.ok) throw new Error('Failed to fetch news');
 
@@ -151,9 +140,9 @@ export const NewsProvider = ({ children }) => {
     } catch (err) {
       setError(err.message);
     }
-  };
+  }, [baseUrl]);
 
-  const deleteFacebookLink = async (id) => {
+  const deleteFacebookLink = React.useCallback(async (id) => {
     try {
       setError(null);
 
@@ -171,12 +160,11 @@ export const NewsProvider = ({ children }) => {
         toast.success(data.message);
       }
 
-      // Optimistically remove from state
       setNews((prev) => prev.filter(item => item._id !== id));
     } catch (err) {
       setError(err.message);
     }
-  };
+  }, [baseUrl, token]);
 
   
 
@@ -188,7 +176,7 @@ export const NewsProvider = ({ children }) => {
   }, []);
 
 
-  const value = {
+  const value = React.useMemo(() => ({
     news, 
     loading, 
     creating, 
@@ -203,7 +191,16 @@ export const NewsProvider = ({ children }) => {
     fetchFacebookLink,
     deleteFacebookLink,
     facebookPosts
-  }
+  }), [
+    news, 
+    loading, 
+    creating, 
+    error, 
+    getNewsById, 
+    singleNews, 
+    singleNewsLoading, 
+    facebookPosts
+  ]);
   // Optional: also expose fetchNews so you can manually refresh
   return (
     <NewsContext.Provider value={value}>
